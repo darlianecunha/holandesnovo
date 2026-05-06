@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frases Úteis em Holandês 🇳🇱</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background: #f4f6f9;
+    color: #1f2937;
+    line-height: 1.5;
+    padding: 24px;
+  }
+  header {
+    background: linear-gradient(135deg, #ae1c28 0%, #21468b 100%);
+    color: #fff;
+    padding: 28px 24px;
+    border-radius: 14px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  header h1 { font-size: 26px; margin-bottom: 6px; }
+  header p { font-size: 14px; opacity: 0.95; }
+  .container { max-width: 1000px; margin: 0 auto; }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 12px 18px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .tab-btn:hover { background: #f1f5f9; color: #21468b; }
+  .tab-btn.active {
+    background: linear-gradient(135deg, #ae1c28 0%, #21468b 100%);
+    color: #fff;
+  }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* Voice selector */
+  .voice-bar {
+    background: #fff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .voice-bar label { color: #475569; font-weight: 500; }
+  .voice-bar select {
+    padding: 6px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    background: #fff;
+  }
+  .voice-bar input[type="range"] { width: 100px; }
+  .voice-bar .hint { color: #94a3b8; font-size: 12px; margin-left: auto; }
+
+  .toc {
+    background: #fff;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .toc h2 { font-size: 16px; margin-bottom: 10px; color: #21468b; }
+  .toc ul { list-style: none; columns: 2; column-gap: 28px; }
+  .toc li { margin-bottom: 6px; font-size: 14px; }
+  .toc a { color: #1f2937; text-decoration: none; }
+  .toc a:hover { color: #ae1c28; }
+  section {
+    background: #fff;
+    padding: 22px 24px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section h2 {
+    color: #21468b;
+    font-size: 18px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f2f5;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  th {
+    background: #f8fafc;
+    color: #475569;
+    text-align: left;
+    padding: 10px 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f2f5;
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td.holandes { color: #ae1c28; font-weight: 500; width: 48%; }
+  td.portugues { color: #1f2937; }
+  td.holandes .frase-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  td.holandes .frase-text { flex: 1; }
+
+  .listen-btn {
+    background: #f1f5f9;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: all 0.15s;
+    color: #21468b;
+  }
+  .listen-btn:hover {
+    background: #21468b;
+    color: #fff;
+    transform: scale(1.08);
+  }
+  .listen-btn.playing {
+    background: #ae1c28;
+    color: #fff;
+    animation: pulse 1s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+  }
+
+  .pergunta { background: #fff8e1; }
+  .resposta { background: #e8f5e9; font-style: italic; }
+  .resposta td:first-child .frase-text::before { content: "↳ "; color: #2e7d32; }
+  .nota {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #eff6ff;
+    border-left: 3px solid #21468b;
+    font-size: 13px;
+    color: #334155;
+    border-radius: 4px;
+  }
+  footer {
+    text-align: center;
+    margin-top: 24px;
+    padding: 16px;
+    color: #64748b;
+    font-size: 13px;
+  }
+  @media (max-width: 600px) {
+    .toc ul { columns: 1; }
+    body { padding: 12px; }
+    .tabs { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>Frases Úteis em Holandês</h1>
+  <p>Guia organizado por temas, com áudio em holandês nativo</p>
+</header>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="tab1">📘 Frases Úteis 1</button>
+  <button class="tab-btn" data-tab="tab2">📗 Frases Úteis 2</button>
+</div>
+
+<div class="voice-bar">
+  <label for="voiceSelect">🎙️ Voz:</label>
+  <select id="voiceSelect"></select>
+  <label for="rateRange">Velocidade:</label>
+  <input type="range" id="rateRange" min="0.5" max="1.2" step="0.1" value="0.9">
+  <span id="rateValue">0.9x</span>
+  <span class="hint">Clique no 🔊 ao lado de cada frase para ouvir</span>
+</div>
+
+<!-- ============ ABA 1 ============ -->
+<div class="tab-content active" id="tab1">
+
+<nav class="toc">
+  <h2>Sumário · Frases Úteis 1</h2>
+  <ul>
+    <li><a href="#cumprimentos">1. Cumprimentos e despedidas</a></li>
+    <li><a href="#apresentacao">2. Apresentação pessoal</a></li>
+    <li><a href="#familia">3. Família</a></li>
+    <li><a href="#casa">4. Casa e moradia</a></li>
+    <li><a href="#cotidiano">5. Cotidiano e alimentação</a></li>
+    <li><a href="#rotina">6. Tempo e rotina</a></li>
+    <li><a href="#numeros">7. Números, horas e datas</a></li>
+    <li><a href="#cidade">8. Na cidade e direções</a></li>
+    <li><a href="#transporte">9. Transporte</a></li>
+    <li><a href="#compras">10. Compras</a></li>
+    <li><a href="#restaurante">11. Restaurante</a></li>
+    <li><a href="#trabalho">12. Trabalho e estudos</a></li>
+    <li><a href="#saude">13. Saúde</a></li>
+    <li><a href="#sentimentos">14. Sentimentos e emoções</a></li>
+    <li><a href="#clima">15. Clima e estações</a></li>
+    <li><a href="#emergencias">16. Emergências</a></li>
+    <li><a href="#social">17. Conversação social</a></li>
+  </ul>
+</nav>
+
+<section id="cumprimentos">
+  <h2>1. Cumprimentos e despedidas</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Hallo">Hallo</td><td class="portugues">Olá</td></tr>
+    <tr><td class="holandes" data-nl="Hoi">Hoi</td><td class="portugues">Oi</td></tr>
+    <tr><td class="holandes" data-nl="Goedemorgen">Goedemorgen</td><td class="portugues">Bom dia</td></tr>
+    <tr><td class="holandes" data-nl="Goedemiddag">Goedemiddag</td><td class="portugues">Boa tarde</td></tr>
+    <tr><td class="holandes" data-nl="Goedenavond">Goedenavond</td><td class="portugues">Boa noite (ao chegar)</td></tr>
+    <tr><td class="holandes" data-nl="Welterusten">Welterusten</td><td class="portugues">Boa noite (ao dormir)</td></tr>
+    <tr><td class="holandes" data-nl="Tot ziens">Tot ziens</td><td class="portugues">Até logo</td></tr>
+    <tr><td class="holandes" data-nl="Tot morgen">Tot morgen</td><td class="portugues">Até amanhã</td></tr>
+    <tr><td class="holandes" data-nl="Doei">Doei</td><td class="portugues">Tchau</td></tr>
+    <tr><td class="holandes" data-nl="Fijne dag!">Fijne dag!</td><td class="portugues">Tenha um bom dia!</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe gaat het?">Hoe gaat het?</td><td class="portugues">Como vai?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Het gaat goed, dank je. En met jou?">Het gaat goed, dank je. En met jou?</td><td class="portugues">Vai bem, obrigada. E com você?</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe gaat het met u?">Hoe gaat het met u?</td><td class="portugues">Como o(a) senhor(a) está? (formal)</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Heel goed, dank u wel.">Heel goed, dank u wel.</td><td class="portugues">Muito bem, muito obrigada.</td></tr>
+  </table>
+</section>
+
+<section id="apresentacao">
+  <h2>2. Apresentação pessoal</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik heet Darliane.">Ik heet Darliane.</td><td class="portugues">Me chamo Darliane.</td></tr>
+    <tr><td class="holandes" data-nl="Ik kom uit Brazilië.">Ik kom uit Brazilië.</td><td class="portugues">Venho do Brasil.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben Braziliaanse.">Ik ben Braziliaanse.</td><td class="portugues">Sou brasileira.</td></tr>
+    <tr><td class="holandes" data-nl="Ik spreek een beetje Nederlands.">Ik spreek een beetje Nederlands.</td><td class="portugues">Falo um pouco de holandês.</td></tr>
+    <tr><td class="holandes" data-nl="Ik leer Nederlands.">Ik leer Nederlands.</td><td class="portugues">Estou aprendendo holandês.</td></tr>
+    <tr><td class="holandes" data-nl="Ik werk als docent.">Ik werk als docent.</td><td class="portugues">Trabalho como professora.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben onderzoeker.">Ik ben onderzoeker.</td><td class="portugues">Sou pesquisadora.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben 54 jaar oud.">Ik ben 54 jaar oud.</td><td class="portugues">Tenho 54 anos.</td></tr>
+    <tr><td class="holandes" data-nl="Aangenaam kennis te maken.">Aangenaam kennis te maken.</td><td class="portugues">Prazer em conhecer.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe heet je?">Hoe heet je?</td><td class="portugues">Como você se chama?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik heet Darliane.">Ik heet Darliane.</td><td class="portugues">Me chamo Darliane.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Waar kom je vandaan?">Waar kom je vandaan?</td><td class="portugues">De onde você é?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik kom uit Brazilië.">Ik kom uit Brazilië.</td><td class="portugues">Venho do Brasil.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat doe je voor werk?">Wat doe je voor werk?</td><td class="portugues">Qual é a sua profissão?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik ben professor aan de universiteit.">Ik ben professor aan de universiteit.</td><td class="portugues">Sou professora universitária.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Spreek je Engels?">Spreek je Engels?</td><td class="portugues">Você fala inglês?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, ik spreek Engels en Portugees.">Ja, ik spreek Engels en Portugees.</td><td class="portugues">Sim, falo inglês e português.</td></tr>
+  </table>
+</section>
+
+<section id="familia">
+  <h2>3. Família</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Mijn dochter woont in Rotterdam.">Mijn dochter woont in Rotterdam.</td><td class="portugues">Minha filha mora em Rotterdam.</td></tr>
+    <tr><td class="holandes" data-nl="Mijn moeder is 80 jaar oud.">Mijn moeder is 80 jaar oud.</td><td class="portugues">Minha mãe tem 80 anos.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb geen kinderen thuis.">Ik heb geen kinderen thuis.</td><td class="portugues">Não tenho filhos em casa.</td></tr>
+    <tr><td class="holandes" data-nl="Mijn familie woont in Brazilië.">Mijn familie woont in Brazilië.</td><td class="portugues">Minha família mora no Brasil.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb een zus en een broer.">Ik heb een zus en een broer.</td><td class="portugues">Tenho uma irmã e um irmão.</td></tr>
+    <tr><td class="holandes" data-nl="Mijn man heet João.">Mijn man heet João.</td><td class="portugues">Meu marido se chama João.</td></tr>
+    <tr><td class="holandes" data-nl="Mijn ouders zijn met pensioen.">Mijn ouders zijn met pensioen.</td><td class="portugues">Meus pais estão aposentados.</td></tr>
+    <tr><td class="holandes" data-nl="Ik mis mijn familie.">Ik mis mijn familie.</td><td class="portugues">Sinto falta da minha família.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Heb je kinderen?">Heb je kinderen?</td><td class="portugues">Você tem filhos?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, ik heb één dochter.">Ja, ik heb één dochter.</td><td class="portugues">Sim, tenho uma filha.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe oud is je dochter?">Hoe oud is je dochter?</td><td class="portugues">Quantos anos tem sua filha?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ze is dertig jaar oud.">Ze is dertig jaar oud.</td><td class="portugues">Ela tem trinta anos.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Ben je getrouwd?">Ben je getrouwd?</td><td class="portugues">Você é casada?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, ik ben getrouwd.">Ja, ik ben getrouwd.</td><td class="portugues">Sim, sou casada.</td></tr>
+  </table>
+</section>
+
+<section id="casa">
+  <h2>4. Casa e moradia</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik woon in een appartement.">Ik woon in een appartement.</td><td class="portugues">Moro em um apartamento.</td></tr>
+    <tr><td class="holandes" data-nl="Mijn huis is groot.">Mijn huis is groot.</td><td class="portugues">Minha casa é grande.</td></tr>
+    <tr><td class="holandes" data-nl="Ik woon alleen.">Ik woon alleen.</td><td class="portugues">Moro sozinha.</td></tr>
+    <tr><td class="holandes" data-nl="Ik huur een kamer.">Ik huur een kamer.</td><td class="portugues">Alugo um quarto.</td></tr>
+    <tr><td class="holandes" data-nl="Het appartement heeft twee slaapkamers.">Het appartement heeft twee slaapkamers.</td><td class="portugues">O apartamento tem dois quartos.</td></tr>
+    <tr><td class="holandes" data-nl="Ik woon dichtbij het centrum.">Ik woon dichtbij het centrum.</td><td class="portugues">Moro perto do centro.</td></tr>
+    <tr><td class="holandes" data-nl="De huur is duur.">De huur is duur.</td><td class="portugues">O aluguel é caro.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb een mooi uitzicht.">Ik heb een mooi uitzicht.</td><td class="portugues">Tenho uma bela vista.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Waar woon je?">Waar woon je?</td><td class="portugues">Onde você mora?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik woon in Rotterdam.">Ik woon in Rotterdam.</td><td class="portugues">Moro em Rotterdam.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Woon je alleen of met familie?">Woon je alleen of met familie?</td><td class="portugues">Você mora sozinha ou com a família?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik woon met mijn dochter.">Ik woon met mijn dochter.</td><td class="portugues">Moro com minha filha.</td></tr>
+  </table>
+</section>
+
+<section id="cotidiano">
+  <h2>5. Cotidiano e alimentação</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik drink koffie in de ochtend.">Ik drink koffie in de ochtend.</td><td class="portugues">Bebo café pela manhã.</td></tr>
+    <tr><td class="holandes" data-nl="Ik eet brood met kaas.">Ik eet brood met kaas.</td><td class="portugues">Como pão com queijo.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ga naar de supermarkt.">Ik ga naar de supermarkt.</td><td class="portugues">Vou ao supermercado.</td></tr>
+    <tr><td class="holandes" data-nl="Ik neem de bus.">Ik neem de bus.</td><td class="portugues">Pego o ônibus.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ga te voet.">Ik ga te voet.</td><td class="portugues">Vou a pé.</td></tr>
+    <tr><td class="holandes" data-nl="Ik fiets naar de universiteit.">Ik fiets naar de universiteit.</td><td class="portugues">Vou de bicicleta para a universidade.</td></tr>
+    <tr><td class="holandes" data-nl="Ik kook thuis.">Ik kook thuis.</td><td class="portugues">Cozinho em casa.</td></tr>
+    <tr><td class="holandes" data-nl="Ik drink veel water.">Ik drink veel water.</td><td class="portugues">Bebo bastante água.</td></tr>
+    <tr><td class="holandes" data-nl="Ik hou van Nederlandse stroopwafels.">Ik hou van Nederlandse stroopwafels.</td><td class="portugues">Gosto de stroopwafels holandeses.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat eet je in het ontbijt?">Wat eet je in het ontbijt?</td><td class="portugues">O que você come no café da manhã?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik eet brood met kaas en fruit.">Ik eet brood met kaas en fruit.</td><td class="portugues">Como pão com queijo e frutas.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hou je van koffie?">Hou je van koffie?</td><td class="portugues">Você gosta de café?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, ik hou heel veel van koffie.">Ja, ik hou heel veel van koffie.</td><td class="portugues">Sim, gosto muito de café.</td></tr>
+  </table>
+</section>
+
+<section id="rotina">
+  <h2>6. Tempo e rotina</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik sta om zeven uur op.">Ik sta om zeven uur op.</td><td class="portugues">Levanto às sete horas.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ga om elf uur slapen.">Ik ga om elf uur slapen.</td><td class="portugues">Vou dormir às onze horas.</td></tr>
+    <tr><td class="holandes" data-nl="Ik werk van maandag tot vrijdag.">Ik werk van maandag tot vrijdag.</td><td class="portugues">Trabalho de segunda a sexta.</td></tr>
+    <tr><td class="holandes" data-nl="In het weekend lees ik boeken.">In het weekend lees ik boeken.</td><td class="portugues">No fim de semana leio livros.</td></tr>
+    <tr><td class="holandes" data-nl="'s Ochtends studeer ik.">'s Ochtends studeer ik.</td><td class="portugues">De manhã eu estudo.</td></tr>
+    <tr><td class="holandes" data-nl="'s Middags werk ik thuis.">'s Middags werk ik thuis.</td><td class="portugues">À tarde trabalho em casa.</td></tr>
+    <tr><td class="holandes" data-nl="'s Avonds kijk ik tv.">'s Avonds kijk ik tv.</td><td class="portugues">À noite assisto TV.</td></tr>
+    <tr><td class="holandes" data-nl="Vandaag heb ik een vergadering.">Vandaag heb ik een vergadering.</td><td class="portugues">Hoje tenho uma reunião.</td></tr>
+    <tr><td class="holandes" data-nl="Morgen ga ik naar de universiteit.">Morgen ga ik naar de universiteit.</td><td class="portugues">Amanhã vou à universidade.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe laat sta je op?">Hoe laat sta je op?</td><td class="portugues">A que horas você levanta?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik sta om zeven uur op.">Ik sta om zeven uur op.</td><td class="portugues">Levanto às sete horas.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat doe je in het weekend?">Wat doe je in het weekend?</td><td class="portugues">O que você faz no fim de semana?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik lees, wandel en kook.">Ik lees, wandel en kook.</td><td class="portugues">Leio, caminho e cozinho.</td></tr>
+  </table>
+</section>
+
+<section id="numeros">
+  <h2>7. Números, horas e datas</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="een, twee, drie, vier, vijf">een, twee, drie, vier, vijf</td><td class="portugues">um, dois, três, quatro, cinco</td></tr>
+    <tr><td class="holandes" data-nl="zes, zeven, acht, negen, tien">zes, zeven, acht, negen, tien</td><td class="portugues">seis, sete, oito, nove, dez</td></tr>
+    <tr><td class="holandes" data-nl="twintig, dertig, veertig, vijftig">twintig, dertig, veertig, vijftig</td><td class="portugues">vinte, trinta, quarenta, cinquenta</td></tr>
+    <tr><td class="holandes" data-nl="honderd, duizend">honderd, duizend</td><td class="portugues">cem, mil</td></tr>
+    <tr><td class="holandes" data-nl="maandag, dinsdag, woensdag">maandag, dinsdag, woensdag</td><td class="portugues">segunda, terça, quarta</td></tr>
+    <tr><td class="holandes" data-nl="donderdag, vrijdag, zaterdag, zondag">donderdag, vrijdag, zaterdag, zondag</td><td class="portugues">quinta, sexta, sábado, domingo</td></tr>
+    <tr><td class="holandes" data-nl="januari, februari, maart, april">januari, februari, maart, april</td><td class="portugues">janeiro, fevereiro, março, abril</td></tr>
+    <tr><td class="holandes" data-nl="Het is tien uur.">Het is tien uur.</td><td class="portugues">São dez horas.</td></tr>
+    <tr><td class="holandes" data-nl="Het is half drie.">Het is half drie.</td><td class="portugues">São duas e meia.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe laat is het?">Hoe laat is het?</td><td class="portugues">Que horas são?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Het is kwart over negen.">Het is kwart over negen.</td><td class="portugues">São nove e quinze.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Welke dag is het vandaag?">Welke dag is het vandaag?</td><td class="portugues">Que dia é hoje?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Vandaag is het woensdag.">Vandaag is het woensdag.</td><td class="portugues">Hoje é quarta-feira.</td></tr>
+  </table>
+</section>
+
+<section id="cidade">
+  <h2>8. Na cidade e direções</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Waar is het station?">Waar is het station?</td><td class="portugues">Onde fica a estação?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Het station is rechtdoor en dan rechts.">Het station is rechtdoor en dan rechts.</td><td class="portugues">A estação é em frente e depois à direita.</td></tr>
+    <tr><td class="holandes" data-nl="Ik zoek een restaurant.">Ik zoek een restaurant.</td><td class="portugues">Estou procurando um restaurante.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoeveel kost dit?">Hoeveel kost dit?</td><td class="portugues">Quanto custa isso?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Dat kost tien euro.">Dat kost tien euro.</td><td class="portugues">Custa dez euros.</td></tr>
+    <tr><td class="holandes" data-nl="Ik wil een kaartje kopen.">Ik wil een kaartje kopen.</td><td class="portugues">Quero comprar uma passagem.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Kunt u mij helpen?">Kunt u mij helpen?</td><td class="portugues">Pode me ajudar?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Natuurlijk, hoe kan ik helpen?">Natuurlijk, hoe kan ik helpen?</td><td class="portugues">Claro, como posso ajudar?</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Waar is de wc?">Waar is de wc?</td><td class="portugues">Onde fica o banheiro?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Het toilet is daar, links.">Het toilet is daar, links.</td><td class="portugues">O banheiro fica ali, à esquerda.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Is het ver?">Is het ver?</td><td class="portugues">É longe?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Nee, het is dichtbij.">Nee, het is dichtbij.</td><td class="portugues">Não, é perto.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe kom ik bij het centrum?">Hoe kom ik bij het centrum?</td><td class="portugues">Como chego ao centro?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Neem tram 7 en stap uit bij Centraal Station.">Neem tram 7 en stap uit bij Centraal Station.</td><td class="portugues">Pegue o bonde 7 e desça na estação central.</td></tr>
+    <tr><td class="holandes" data-nl="links, rechts, rechtdoor">links / rechts / rechtdoor</td><td class="portugues">esquerda / direita / em frente</td></tr>
+  </table>
+</section>
+
+<section id="transporte">
+  <h2>9. Transporte</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik neem de trein naar Amsterdam.">Ik neem de trein naar Amsterdam.</td><td class="portugues">Pego o trem para Amsterdã.</td></tr>
+    <tr><td class="holandes" data-nl="Een retourtje, alstublieft.">Een retourtje, alstublieft.</td><td class="portugues">Uma passagem de ida e volta, por favor.</td></tr>
+    <tr><td class="holandes" data-nl="Een enkele reis naar Den Haag.">Een enkele reis naar Den Haag.</td><td class="portugues">Uma passagem só de ida para Haia.</td></tr>
+    <tr><td class="holandes" data-nl="Welk perron?">Welk perron?</td><td class="portugues">Qual plataforma?</td></tr>
+    <tr><td class="holandes" data-nl="De trein heeft vertraging.">De trein heeft vertraging.</td><td class="portugues">O trem está atrasado.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb mijn OV-chipkaart vergeten.">Ik heb mijn OV-chipkaart vergeten.</td><td class="portugues">Esqueci meu cartão de transporte.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe laat vertrekt de trein?">Hoe laat vertrekt de trein?</td><td class="portugues">A que horas o trem parte?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="De trein vertrekt om half negen.">De trein vertrekt om half negen.</td><td class="portugues">O trem parte às oito e meia.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Stopt deze bus bij het centrum?">Stopt deze bus bij het centrum?</td><td class="portugues">Este ônibus para no centro?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, dit is de juiste bus.">Ja, dit is de juiste bus.</td><td class="portugues">Sim, é o ônibus certo.</td></tr>
+  </table>
+</section>
+
+<section id="compras">
+  <h2>10. Compras</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik wil graag dit kopen.">Ik wil graag dit kopen.</td><td class="portugues">Eu gostaria de comprar isto.</td></tr>
+    <tr><td class="holandes" data-nl="Heeft u een kleinere maat?">Heeft u een kleinere maat?</td><td class="portugues">A senhora tem um tamanho menor?</td></tr>
+    <tr><td class="holandes" data-nl="Mag ik dit passen?">Mag ik dit passen?</td><td class="portugues">Posso experimentar?</td></tr>
+    <tr><td class="holandes" data-nl="Ik kijk alleen even.">Ik kijk alleen even.</td><td class="portugues">Estou só dando uma olhada.</td></tr>
+    <tr><td class="holandes" data-nl="Te duur voor mij.">Te duur voor mij.</td><td class="portugues">Caro demais para mim.</td></tr>
+    <tr><td class="holandes" data-nl="Ik betaal met pin.">Ik betaal met pin.</td><td class="portugues">Pago no cartão.</td></tr>
+    <tr><td class="holandes" data-nl="Mag ik een tasje?">Mag ik een tasje?</td><td class="portugues">Posso pegar uma sacola?</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoeveel kost dat?">Hoeveel kost dat?</td><td class="portugues">Quanto custa?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Dat is vijftien euro.">Dat is vijftien euro.</td><td class="portugues">São quinze euros.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Heeft u korting?">Heeft u korting?</td><td class="portugues">Tem desconto?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, twintig procent korting.">Ja, twintig procent korting.</td><td class="portugues">Sim, vinte por cento de desconto.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Kan ik pinnen?">Kan ik pinnen?</td><td class="portugues">Posso pagar com cartão?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, dat kan.">Ja, dat kan.</td><td class="portugues">Sim, pode.</td></tr>
+  </table>
+</section>
+
+<section id="restaurante">
+  <h2>11. Restaurante</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Een tafel voor twee, alstublieft.">Een tafel voor twee, alstublieft.</td><td class="portugues">Uma mesa para dois, por favor.</td></tr>
+    <tr><td class="holandes" data-nl="De kaart, alstublieft.">De kaart, alstublieft.</td><td class="portugues">O cardápio, por favor.</td></tr>
+    <tr><td class="holandes" data-nl="Ik wil graag bestellen.">Ik wil graag bestellen.</td><td class="portugues">Eu gostaria de pedir.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben vegetariër.">Ik ben vegetariër.</td><td class="portugues">Sou vegetariana.</td></tr>
+    <tr><td class="holandes" data-nl="Zonder suiker, alstublieft.">Zonder suiker, alstublieft.</td><td class="portugues">Sem açúcar, por favor.</td></tr>
+    <tr><td class="holandes" data-nl="Het was heerlijk.">Het was heerlijk.</td><td class="portugues">Estava delicioso.</td></tr>
+    <tr><td class="holandes" data-nl="De rekening, alstublieft.">De rekening, alstublieft.</td><td class="portugues">A conta, por favor.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat wilt u drinken?">Wat wilt u drinken?</td><td class="portugues">O que a senhora deseja beber?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Een glas water, alstublieft.">Een glas water, alstublieft.</td><td class="portugues">Um copo de água, por favor.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wilt u een toetje?">Wilt u een toetje?</td><td class="portugues">Deseja sobremesa?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Nee, dank u, alleen koffie.">Nee, dank u, alleen koffie.</td><td class="portugues">Não, obrigada, apenas café.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Heeft u glutenvrije opties?">Heeft u glutenvrije opties?</td><td class="portugues">Tem opções sem glúten?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, deze gerechten zijn glutenvrij.">Ja, deze gerechten zijn glutenvrij.</td><td class="portugues">Sim, estes pratos são sem glúten.</td></tr>
+  </table>
+</section>
+
+<section id="trabalho">
+  <h2>12. Trabalho e estudos</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik werk aan de universiteit.">Ik werk aan de universiteit.</td><td class="portugues">Trabalho na universidade.</td></tr>
+    <tr><td class="holandes" data-nl="Ik doe onderzoek over duurzaamheid.">Ik doe onderzoek over duurzaamheid.</td><td class="portugues">Pesquiso sobre sustentabilidade.</td></tr>
+    <tr><td class="holandes" data-nl="Ik schrijf een artikel.">Ik schrijf een artikel.</td><td class="portugues">Estou escrevendo um artigo.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb een vergadering om tien uur.">Ik heb een vergadering om tien uur.</td><td class="portugues">Tenho uma reunião às dez horas.</td></tr>
+    <tr><td class="holandes" data-nl="Ik werk thuis.">Ik werk thuis.</td><td class="portugues">Trabalho em casa.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb een deadline.">Ik heb een deadline.</td><td class="portugues">Tenho um prazo.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat is je onderzoeksgebied?">Wat is je onderzoeksgebied?</td><td class="portugues">Qual é a sua área de pesquisa?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Maritieme duurzaamheid en AI.">Maritieme duurzaamheid en AI.</td><td class="portugues">Sustentabilidade marítima e IA.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Waar werk je?">Waar werk je?</td><td class="portugues">Onde você trabalha?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Bij de Erasmus Universiteit Rotterdam.">Bij de Erasmus Universiteit Rotterdam.</td><td class="portugues">Na Erasmus University Rotterdam.</td></tr>
+  </table>
+</section>
+
+<section id="saude">
+  <h2>13. Saúde</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik voel me goed.">Ik voel me goed.</td><td class="portugues">Me sinto bem.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben ziek.">Ik ben ziek.</td><td class="portugues">Estou doente.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb hoofdpijn.">Ik heb hoofdpijn.</td><td class="portugues">Estou com dor de cabeça.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb een afspraak met de dokter.">Ik heb een afspraak met de dokter.</td><td class="portugues">Tenho consulta com o médico.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb keelpijn.">Ik heb keelpijn.</td><td class="portugues">Estou com dor de garganta.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb koorts.">Ik heb koorts.</td><td class="portugues">Estou com febre.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben moe.">Ik ben moe.</td><td class="portugues">Estou cansada.</td></tr>
+    <tr><td class="holandes" data-nl="Ik moet medicijnen kopen.">Ik moet medicijnen kopen.</td><td class="portugues">Preciso comprar remédios.</td></tr>
+    <tr><td class="holandes" data-nl="Waar is de apotheek?">Waar is de apotheek?</td><td class="portugues">Onde fica a farmácia?</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe voel je je?">Hoe voel je je?</td><td class="portugues">Como você está se sentindo?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Niet zo goed, ik ben verkouden.">Niet zo goed, ik ben verkouden.</td><td class="portugues">Não muito bem, estou resfriada.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Heeft u een recept nodig?">Heeft u een recept nodig?</td><td class="portugues">A senhora precisa de receita?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, ik heb een recept van de huisarts.">Ja, ik heb een recept van de huisarts.</td><td class="portugues">Sim, tenho receita do clínico geral.</td></tr>
+  </table>
+</section>
+
+<section id="sentimentos">
+  <h2>14. Sentimentos e emoções</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik ben blij.">Ik ben blij.</td><td class="portugues">Estou feliz.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben verdrietig.">Ik ben verdrietig.</td><td class="portugues">Estou triste.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben moe.">Ik ben moe.</td><td class="portugues">Estou cansada.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb honger.">Ik heb honger.</td><td class="portugues">Estou com fome.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb dorst.">Ik heb dorst.</td><td class="portugues">Estou com sede.</td></tr>
+    <tr><td class="holandes" data-nl="Ik mis Brazilië.">Ik mis Brazilië.</td><td class="portugues">Sinto saudades do Brasil.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben zenuwachtig.">Ik ben zenuwachtig.</td><td class="portugues">Estou nervosa.</td></tr>
+    <tr><td class="holandes" data-nl="Ik vind dit leuk.">Ik vind dit leuk.</td><td class="portugues">Gosto disto.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat vind je ervan?">Wat vind je ervan?</td><td class="portugues">O que você acha?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik vind het heel interessant.">Ik vind het heel interessant.</td><td class="portugues">Acho muito interessante.</td></tr>
+  </table>
+</section>
+
+<section id="clima">
+  <h2>15. Clima e estações</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Het is mooi weer.">Het is mooi weer.</td><td class="portugues">Está fazendo um tempo bom.</td></tr>
+    <tr><td class="holandes" data-nl="Het regent.">Het regent.</td><td class="portugues">Está chovendo.</td></tr>
+    <tr><td class="holandes" data-nl="Het is koud.">Het is koud.</td><td class="portugues">Está frio.</td></tr>
+    <tr><td class="holandes" data-nl="Het is warm.">Het is warm.</td><td class="portugues">Está quente.</td></tr>
+    <tr><td class="holandes" data-nl="Het waait hard.">Het waait hard.</td><td class="portugues">Está ventando muito.</td></tr>
+    <tr><td class="holandes" data-nl="Het sneeuwt.">Het sneeuwt.</td><td class="portugues">Está nevando.</td></tr>
+    <tr><td class="holandes" data-nl="lente, zomer, herfst, winter">lente, zomer, herfst, winter</td><td class="portugues">primavera, verão, outono, inverno</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe is het weer vandaag?">Hoe is het weer vandaag?</td><td class="portugues">Como está o tempo hoje?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Het is bewolkt en koel.">Het is bewolkt en koel.</td><td class="portugues">Está nublado e fresco.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Gaat het regenen?">Gaat het regenen?</td><td class="portugues">Vai chover?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, neem een paraplu mee.">Ja, neem een paraplu mee.</td><td class="portugues">Sim, leve um guarda-chuva.</td></tr>
+  </table>
+</section>
+
+<section id="emergencias">
+  <h2>16. Emergências</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Help!">Help!</td><td class="portugues">Socorro!</td></tr>
+    <tr><td class="holandes" data-nl="Bel de politie!">Bel de politie!</td><td class="portugues">Chame a polícia!</td></tr>
+    <tr><td class="holandes" data-nl="Bel een ambulance!">Bel een ambulance!</td><td class="portugues">Chame uma ambulância!</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben verdwaald.">Ik ben verdwaald.</td><td class="portugues">Estou perdida.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb mijn paspoort verloren.">Ik heb mijn paspoort verloren.</td><td class="portugues">Perdi meu passaporte.</td></tr>
+    <tr><td class="holandes" data-nl="Mijn telefoon is gestolen.">Mijn telefoon is gestolen.</td><td class="portugues">Meu celular foi roubado.</td></tr>
+    <tr><td class="holandes" data-nl="Het is een noodgeval.">Het is een noodgeval.</td><td class="portugues">É uma emergência.</td></tr>
+    <tr><td class="holandes" data-nl="Bel 112!">Bel 112!</td><td class="portugues">Ligue para 112!</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat is er gebeurd?">Wat is er gebeurd?</td><td class="portugues">O que aconteceu?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik heb een ongeluk gezien.">Ik heb een ongeluk gezien.</td><td class="portugues">Vi um acidente.</td></tr>
+  </table>
+  <div class="nota">
+    <strong>Importante:</strong> O número de emergência geral na Holanda é o <strong>112</strong> (polícia, ambulância e bombeiros).
+  </div>
+</section>
+
+<section id="social">
+  <h2>17. Conversação social</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Dank u wel.">Dank u wel.</td><td class="portugues">Muito obrigada (formal).</td></tr>
+    <tr><td class="holandes" data-nl="Dank je wel.">Dank je wel.</td><td class="portugues">Muito obrigada (informal).</td></tr>
+    <tr><td class="holandes" data-nl="Alstublieft.">Alstublieft.</td><td class="portugues">Por favor / Aqui está (formal).</td></tr>
+    <tr><td class="holandes" data-nl="Graag gedaan.">Graag gedaan.</td><td class="portugues">De nada.</td></tr>
+    <tr><td class="holandes" data-nl="Sorry, het spijt me.">Sorry / Het spijt me.</td><td class="portugues">Desculpa / Sinto muito.</td></tr>
+    <tr><td class="holandes" data-nl="Geen probleem.">Geen probleem.</td><td class="portugues">Sem problema.</td></tr>
+    <tr><td class="holandes" data-nl="Pardon?">Pardon?</td><td class="portugues">Como, por favor?</td></tr>
+    <tr><td class="holandes" data-nl="Kunt u dat herhalen?">Kunt u dat herhalen?</td><td class="portugues">Pode repetir?</td></tr>
+    <tr><td class="holandes" data-nl="Kunt u langzamer praten?">Kunt u langzamer praten?</td><td class="portugues">Pode falar mais devagar?</td></tr>
+    <tr><td class="holandes" data-nl="Ik begrijp het niet.">Ik begrijp het niet.</td><td class="portugues">Não entendo.</td></tr>
+    <tr><td class="holandes" data-nl="Ik begrijp het.">Ik begrijp het.</td><td class="portugues">Entendo.</td></tr>
+    <tr><td class="holandes" data-nl="Hoe zeg je dat in het Nederlands?">Hoe zeg je dat in het Nederlands?</td><td class="portugues">Como se diz isso em holandês?</td></tr>
+    <tr><td class="holandes" data-nl="Wat betekent dit woord?">Wat betekent dit woord?</td><td class="portugues">O que significa esta palavra?</td></tr>
+    <tr><td class="holandes" data-nl="Proost!">Proost!</td><td class="portugues">Saúde! (brindando)</td></tr>
+    <tr><td class="holandes" data-nl="Gefeliciteerd!">Gefeliciteerd!</td><td class="portugues">Parabéns!</td></tr>
+    <tr><td class="holandes" data-nl="Veel succes!">Veel succes!</td><td class="portugues">Boa sorte!</td></tr>
+    <tr><td class="holandes" data-nl="Eet smakelijk!">Eet smakelijk!</td><td class="portugues">Bom apetite!</td></tr>
+  </table>
+  <div class="nota">
+    <strong>Dica de uso:</strong> em situações formais (com professores, atendentes, pessoas mais velhas), prefira <em>u</em> em vez de <em>je/jij</em>. Os holandeses costumam alternar para o tratamento informal rapidamente.
+  </div>
+</section>
+
+</div>
+<!-- ============ FIM ABA 1 ============ -->
+
+
+<!-- ============ ABA 2 ============ -->
+<div class="tab-content" id="tab2">
+
+<nav class="toc">
+  <h2>Sumário · Frases Úteis 2 (intermediário/avançado)</h2>
+  <ul>
+    <li><a href="#universidade">1. Universidade e vida acadêmica</a></li>
+    <li><a href="#reunioes">2. Reuniões e apresentações</a></li>
+    <li><a href="#convites">3. Convites e vida social</a></li>
+    <li><a href="#hotel">4. Hotel e hospedagem</a></li>
+    <li><a href="#banco">5. Banco e burocracia</a></li>
+    <li><a href="#telefone">6. Telefone e correspondência</a></li>
+    <li><a href="#cultura">7. Lazer e cultura</a></li>
+    <li><a href="#opinioes">8. Opiniões e comparações</a></li>
+    <li><a href="#favores">9. Pedir favores e ajuda</a></li>
+    <li><a href="#planos">10. Planos e futuro</a></li>
+    <li><a href="#passado">11. Falando do passado</a></li>
+    <li><a href="#expressoes">12. Expressões idiomáticas úteis</a></li>
+    <li><a href="#tecnologia">13. Tecnologia e internet</a></li>
+    <li><a href="#viagens">14. Viagens e turismo</a></li>
+    <li><a href="#despedidas">15. Despedidas e saudades</a></li>
+  </ul>
+</nav>
+
+<section id="universidade">
+  <h2>1. Universidade e vida acadêmica</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik geef les aan de universiteit.">Ik geef les aan de universiteit.</td><td class="portugues">Eu dou aulas na universidade.</td></tr>
+    <tr><td class="holandes" data-nl="Ik begeleid promovendi.">Ik begeleid promovendi.</td><td class="portugues">Oriento doutorandos.</td></tr>
+    <tr><td class="holandes" data-nl="Mijn onderzoek gaat over duurzaamheid in havens.">Mijn onderzoek gaat over duurzaamheid in havens.</td><td class="portugues">Minha pesquisa é sobre sustentabilidade em portos.</td></tr>
+    <tr><td class="holandes" data-nl="Ik publiceer in wetenschappelijke tijdschriften.">Ik publiceer in wetenschappelijke tijdschriften.</td><td class="portugues">Publico em revistas científicas.</td></tr>
+    <tr><td class="holandes" data-nl="Ik geef een lezing volgende week.">Ik geef een lezing volgende week.</td><td class="portugues">Vou dar uma palestra na próxima semana.</td></tr>
+    <tr><td class="holandes" data-nl="Ik werk samen met collega's uit Brazilië.">Ik werk samen met collega's uit Brazilië.</td><td class="portugues">Colaboro com colegas do Brasil.</td></tr>
+    <tr><td class="holandes" data-nl="Ik dien een onderzoeksvoorstel in.">Ik dien een onderzoeksvoorstel in.</td><td class="portugues">Vou submeter uma proposta de pesquisa.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Waar studeer je?">Waar studeer je?</td><td class="portugues">Onde você estuda?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik doe een postdoc bij Erasmus.">Ik doe een postdoc bij Erasmus.</td><td class="portugues">Faço um pós-doutorado na Erasmus.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat is je specialisatie?">Wat is je specialisatie?</td><td class="portugues">Qual é a sua especialidade?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Maritieme AI en duurzaamheidsindicatoren.">Maritieme AI en duurzaamheidsindicatoren.</td><td class="portugues">IA marítima e indicadores de sustentabilidade.</td></tr>
+  </table>
+</section>
+
+<section id="reunioes">
+  <h2>2. Reuniões e apresentações</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Goedemorgen, allemaal.">Goedemorgen, allemaal.</td><td class="portugues">Bom dia a todos.</td></tr>
+    <tr><td class="holandes" data-nl="Bedankt voor de uitnodiging.">Bedankt voor de uitnodiging.</td><td class="portugues">Obrigada pelo convite.</td></tr>
+    <tr><td class="holandes" data-nl="Ik wil graag iets toevoegen.">Ik wil graag iets toevoegen.</td><td class="portugues">Eu gostaria de acrescentar algo.</td></tr>
+    <tr><td class="holandes" data-nl="Mag ik een vraag stellen?">Mag ik een vraag stellen?</td><td class="portugues">Posso fazer uma pergunta?</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben het eens met je punt.">Ik ben het eens met je punt.</td><td class="portugues">Concordo com seu ponto.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ben het daar niet helemaal mee eens.">Ik ben het daar niet helemaal mee eens.</td><td class="portugues">Não concordo totalmente.</td></tr>
+    <tr><td class="holandes" data-nl="Kunnen we dat later bespreken?">Kunnen we dat later bespreken?</td><td class="portugues">Podemos discutir isso depois?</td></tr>
+    <tr><td class="holandes" data-nl="Ik stuur de presentatie per e-mail.">Ik stuur de presentatie per e-mail.</td><td class="portugues">Vou enviar a apresentação por e-mail.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Heeft iemand nog vragen?">Heeft iemand nog vragen?</td><td class="portugues">Alguém tem mais perguntas?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, ik heb een korte vraag.">Ja, ik heb een korte vraag.</td><td class="portugues">Sim, tenho uma pergunta rápida.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wanneer is de volgende vergadering?">Wanneer is de volgende vergadering?</td><td class="portugues">Quando é a próxima reunião?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Volgende week dinsdag om tien uur.">Volgende week dinsdag om tien uur.</td><td class="portugues">Na próxima terça às dez horas.</td></tr>
+  </table>
+</section>
+
+<section id="convites">
+  <h2>3. Convites e vida social</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Heb je zin om koffie te drinken?">Heb je zin om koffie te drinken?</td><td class="portugues">Tem vontade de tomar um café?</td></tr>
+    <tr><td class="holandes" data-nl="Wil je vrijdag uit eten?">Wil je vrijdag uit eten?</td><td class="portugues">Quer jantar fora na sexta?</td></tr>
+    <tr><td class="holandes" data-nl="Kom je bij mij thuis op bezoek?">Kom je bij mij thuis op bezoek?</td><td class="portugues">Quer me visitar em casa?</td></tr>
+    <tr><td class="holandes" data-nl="Met plezier!">Met plezier!</td><td class="portugues">Com prazer!</td></tr>
+    <tr><td class="holandes" data-nl="Helaas kan ik niet.">Helaas kan ik niet.</td><td class="portugues">Infelizmente não posso.</td></tr>
+    <tr><td class="holandes" data-nl="Misschien een andere keer.">Misschien een andere keer.</td><td class="portugues">Talvez em outra ocasião.</td></tr>
+    <tr><td class="holandes" data-nl="Ik haal je op om zeven uur.">Ik haal je op om zeven uur.</td><td class="portugues">Vou te buscar às sete horas.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat ga je dit weekend doen?">Wat ga je dit weekend doen?</td><td class="portugues">O que você vai fazer no fim de semana?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik ga naar een museum in Amsterdam.">Ik ga naar een museum in Amsterdam.</td><td class="portugues">Vou a um museu em Amsterdã.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Heb je tijd om af te spreken?">Heb je tijd om af te spreken?</td><td class="portugues">Você tem tempo para encontrarmos?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, donderdag schikt mij goed.">Ja, donderdag schikt mij goed.</td><td class="portugues">Sim, quinta-feira me serve bem.</td></tr>
+  </table>
+</section>
+
+<section id="hotel">
+  <h2>4. Hotel e hospedagem</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik heb een reservering op naam Cunha.">Ik heb een reservering op naam Cunha.</td><td class="portugues">Tenho uma reserva em nome de Cunha.</td></tr>
+    <tr><td class="holandes" data-nl="Een eenpersoonskamer, alstublieft.">Een eenpersoonskamer, alstublieft.</td><td class="portugues">Um quarto de solteiro, por favor.</td></tr>
+    <tr><td class="holandes" data-nl="Een tweepersoonskamer voor drie nachten.">Een tweepersoonskamer voor drie nachten.</td><td class="portugues">Um quarto de casal por três noites.</td></tr>
+    <tr><td class="holandes" data-nl="Is het ontbijt inbegrepen?">Is het ontbijt inbegrepen?</td><td class="portugues">O café da manhã está incluído?</td></tr>
+    <tr><td class="holandes" data-nl="Hoe laat is het ontbijt?">Hoe laat is het ontbijt?</td><td class="portugues">A que horas é o café da manhã?</td></tr>
+    <tr><td class="holandes" data-nl="De wifi werkt niet.">De wifi werkt niet.</td><td class="portugues">O wi-fi não está funcionando.</td></tr>
+    <tr><td class="holandes" data-nl="Kan ik later uitchecken?">Kan ik later uitchecken?</td><td class="portugues">Posso fazer o checkout mais tarde?</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Heeft u een kamer met uitzicht?">Heeft u een kamer met uitzicht?</td><td class="portugues">Tem quarto com vista?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, op de derde verdieping.">Ja, op de derde verdieping.</td><td class="portugues">Sim, no terceiro andar.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe laat moet ik uitchecken?">Hoe laat moet ik uitchecken?</td><td class="portugues">A que horas devo fazer o checkout?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Voor elf uur 's ochtends.">Voor elf uur 's ochtends.</td><td class="portugues">Antes das onze da manhã.</td></tr>
+  </table>
+</section>
+
+<section id="banco">
+  <h2>5. Banco e burocracia</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik wil een bankrekening openen.">Ik wil een bankrekening openen.</td><td class="portugues">Quero abrir uma conta bancária.</td></tr>
+    <tr><td class="holandes" data-nl="Ik moet mijn BSN-nummer doorgeven.">Ik moet mijn BSN-nummer doorgeven.</td><td class="portugues">Preciso informar meu número BSN.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb een afspraak bij de gemeente.">Ik heb een afspraak bij de gemeente.</td><td class="portugues">Tenho hora marcada na prefeitura.</td></tr>
+    <tr><td class="holandes" data-nl="Ik wil mijn adres veranderen.">Ik wil mijn adres veranderen.</td><td class="portugues">Quero mudar meu endereço.</td></tr>
+    <tr><td class="holandes" data-nl="Hier is mijn paspoort.">Hier is mijn paspoort.</td><td class="portugues">Aqui está meu passaporte.</td></tr>
+    <tr><td class="holandes" data-nl="Welke documenten heb ik nodig?">Welke documenten heb ik nodig?</td><td class="portugues">Que documentos preciso?</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Heeft u een verblijfsvergunning?">Heeft u een verblijfsvergunning?</td><td class="portugues">A senhora tem autorização de residência?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, hier is mijn verblijfskaart.">Ja, hier is mijn verblijfskaart.</td><td class="portugues">Sim, aqui está meu cartão de residência.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoeveel kost de overschrijving?">Hoeveel kost de overschrijving?</td><td class="portugues">Quanto custa a transferência?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Het is gratis binnen Europa.">Het is gratis binnen Europa.</td><td class="portugues">É gratuita dentro da Europa.</td></tr>
+  </table>
+</section>
+
+<section id="telefone">
+  <h2>6. Telefone e correspondência</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Hallo, met Darliane.">Hallo, met Darliane.</td><td class="portugues">Alô, é a Darliane.</td></tr>
+    <tr><td class="holandes" data-nl="Kan ik een boodschap achterlaten?">Kan ik een boodschap achterlaten?</td><td class="portugues">Posso deixar um recado?</td></tr>
+    <tr><td class="holandes" data-nl="Kunt u me terugbellen?">Kunt u me terugbellen?</td><td class="portugues">A senhora pode me ligar de volta?</td></tr>
+    <tr><td class="holandes" data-nl="Mijn nummer is...">Mijn nummer is...</td><td class="portugues">Meu número é...</td></tr>
+    <tr><td class="holandes" data-nl="Ik bel u terug.">Ik bel u terug.</td><td class="portugues">Eu ligo de volta.</td></tr>
+    <tr><td class="holandes" data-nl="De verbinding is slecht.">De verbinding is slecht.</td><td class="portugues">A conexão está ruim.</td></tr>
+    <tr><td class="holandes" data-nl="Ik stuur u een e-mail.">Ik stuur u een e-mail.</td><td class="portugues">Vou enviar um e-mail.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Met wie spreek ik?">Met wie spreek ik?</td><td class="portugues">Com quem estou falando?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Met Darliane Cunha.">Met Darliane Cunha.</td><td class="portugues">Com Darliane Cunha.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Waarover gaat het?">Waarover gaat het?</td><td class="portugues">Sobre o que se trata?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Het gaat over mijn onderzoek.">Het gaat over mijn onderzoek.</td><td class="portugues">É sobre minha pesquisa.</td></tr>
+  </table>
+</section>
+
+<section id="cultura">
+  <h2>7. Lazer e cultura</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik hou van schilderkunst.">Ik hou van schilderkunst.</td><td class="portugues">Gosto de pintura.</td></tr>
+    <tr><td class="holandes" data-nl="Ik wil het Rijksmuseum bezoeken.">Ik wil het Rijksmuseum bezoeken.</td><td class="portugues">Quero visitar o Rijksmuseum.</td></tr>
+    <tr><td class="holandes" data-nl="Ik luister graag naar klassieke muziek.">Ik luister graag naar klassieke muziek.</td><td class="portugues">Gosto de ouvir música clássica.</td></tr>
+    <tr><td class="holandes" data-nl="Ik kijk graag naar films.">Ik kijk graag naar films.</td><td class="portugues">Gosto de assistir a filmes.</td></tr>
+    <tr><td class="holandes" data-nl="Ik lees boeken over geschiedenis.">Ik lees boeken over geschiedenis.</td><td class="portugues">Leio livros de história.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ga naar een tentoonstelling.">Ik ga naar een tentoonstelling.</td><td class="portugues">Vou a uma exposição.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat zijn je hobby's?">Wat zijn je hobby's?</td><td class="portugues">Quais são seus hobbies?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Lezen, wandelen en fotografie.">Lezen, wandelen en fotografie.</td><td class="portugues">Leitura, caminhada e fotografia.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat voor muziek vind je leuk?">Wat voor muziek vind je leuk?</td><td class="portugues">De que tipo de música você gosta?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik hou van bossanova en jazz.">Ik hou van bossanova en jazz.</td><td class="portugues">Gosto de bossa nova e jazz.</td></tr>
+  </table>
+</section>
+
+<section id="opinioes">
+  <h2>8. Opiniões e comparações</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik vind dat heel interessant.">Ik vind dat heel interessant.</td><td class="portugues">Acho isso muito interessante.</td></tr>
+    <tr><td class="holandes" data-nl="Naar mijn mening is dat belangrijk.">Naar mijn mening is dat belangrijk.</td><td class="portugues">Na minha opinião isso é importante.</td></tr>
+    <tr><td class="holandes" data-nl="Ik denk dat het waar is.">Ik denk dat het waar is.</td><td class="portugues">Acho que é verdade.</td></tr>
+    <tr><td class="holandes" data-nl="Dat is beter dan ik dacht.">Dat is beter dan ik dacht.</td><td class="portugues">É melhor do que eu pensava.</td></tr>
+    <tr><td class="holandes" data-nl="Nederland is kleiner dan Brazilië.">Nederland is kleiner dan Brazilië.</td><td class="portugues">A Holanda é menor que o Brasil.</td></tr>
+    <tr><td class="holandes" data-nl="Het weer hier is anders.">Het weer hier is anders.</td><td class="portugues">O clima aqui é diferente.</td></tr>
+    <tr><td class="holandes" data-nl="Ik weet het niet zeker.">Ik weet het niet zeker.</td><td class="portugues">Não tenho certeza.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat vind je van Nederland?">Wat vind je van Nederland?</td><td class="portugues">O que você acha da Holanda?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik vind het een prachtig land.">Ik vind het een prachtig land.</td><td class="portugues">Acho um país lindíssimo.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat is je favoriete stad?">Wat is je favoriete stad?</td><td class="portugues">Qual é sua cidade favorita?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Rotterdam, vanwege de moderne architectuur.">Rotterdam, vanwege de moderne architectuur.</td><td class="portugues">Rotterdam, pela arquitetura moderna.</td></tr>
+  </table>
+</section>
+
+<section id="favores">
+  <h2>9. Pedir favores e ajuda</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Mag ik u iets vragen?">Mag ik u iets vragen?</td><td class="portugues">Posso lhe perguntar uma coisa?</td></tr>
+    <tr><td class="holandes" data-nl="Zou u mij kunnen helpen?">Zou u mij kunnen helpen?</td><td class="portugues">A senhora poderia me ajudar?</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb een gunst nodig.">Ik heb een gunst nodig.</td><td class="portugues">Preciso de um favor.</td></tr>
+    <tr><td class="holandes" data-nl="Kunt u dit voor mij vertalen?">Kunt u dit voor mij vertalen?</td><td class="portugues">A senhora pode traduzir isto para mim?</td></tr>
+    <tr><td class="holandes" data-nl="Ik weet niet hoe dit werkt.">Ik weet niet hoe dit werkt.</td><td class="portugues">Não sei como isso funciona.</td></tr>
+    <tr><td class="holandes" data-nl="Bedankt voor je hulp.">Bedankt voor je hulp.</td><td class="portugues">Obrigada pela sua ajuda.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Kunt u mij iets uitleggen?">Kunt u mij iets uitleggen?</td><td class="portugues">A senhora pode me explicar uma coisa?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, natuurlijk. Wat is uw vraag?">Ja, natuurlijk. Wat is uw vraag?</td><td class="portugues">Sim, claro. Qual é sua pergunta?</td></tr>
+  </table>
+</section>
+
+<section id="planos">
+  <h2>10. Planos e futuro</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Volgend jaar ga ik naar een conferentie.">Volgend jaar ga ik naar een conferentie.</td><td class="portugues">No ano que vem vou a uma conferência.</td></tr>
+    <tr><td class="holandes" data-nl="Ik wil mijn Nederlands verbeteren.">Ik wil mijn Nederlands verbeteren.</td><td class="portugues">Quero melhorar meu holandês.</td></tr>
+    <tr><td class="holandes" data-nl="Misschien blijf ik nog een jaar.">Misschien blijf ik nog een jaar.</td><td class="portugues">Talvez eu fique mais um ano.</td></tr>
+    <tr><td class="holandes" data-nl="Ik ga naar Brazilië in december.">Ik ga naar Brazilië in december.</td><td class="portugues">Vou ao Brasil em dezembro.</td></tr>
+    <tr><td class="holandes" data-nl="Ik hoop een nieuwe baan te vinden.">Ik hoop een nieuwe baan te vinden.</td><td class="portugues">Espero encontrar um novo emprego.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat zijn je toekomstplannen?">Wat zijn je toekomstplannen?</td><td class="portugues">Quais são seus planos para o futuro?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik wil verder onderzoek doen in Europa.">Ik wil verder onderzoek doen in Europa.</td><td class="portugues">Quero continuar pesquisando na Europa.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Blijf je in Nederland?">Blijf je in Nederland?</td><td class="portugues">Você vai ficar na Holanda?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Voorlopig wel, maar ik weet het nog niet zeker.">Voorlopig wel, maar ik weet het nog niet zeker.</td><td class="portugues">Por enquanto sim, mas ainda não tenho certeza.</td></tr>
+  </table>
+</section>
+
+<section id="passado">
+  <h2>11. Falando do passado</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Gisteren was ik op de universiteit.">Gisteren was ik op de universiteit.</td><td class="portugues">Ontem eu estava na universidade.</td></tr>
+    <tr><td class="holandes" data-nl="Vorige week heb ik een artikel afgerond.">Vorige week heb ik een artikel afgerond.</td><td class="portugues">Na semana passada terminei um artigo.</td></tr>
+    <tr><td class="holandes" data-nl="In 2024 ben ik naar Nederland verhuisd.">In 2024 ben ik naar Nederland verhuisd.</td><td class="portugues">Em 2024 me mudei para a Holanda.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb mijn doctoraat in Spanje gehaald.">Ik heb mijn doctoraat in Spanje gehaald.</td><td class="portugues">Fiz meu doutorado na Espanha.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb dat al eerder gedaan.">Ik heb dat al eerder gedaan.</td><td class="portugues">Eu já fiz isso antes.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe was je dag?">Hoe was je dag?</td><td class="portugues">Como foi seu dia?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Heel productief, dank je.">Heel productief, dank je.</td><td class="portugues">Muito produtivo, obrigada.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat heb je gisteren gedaan?">Wat heb je gisteren gedaan?</td><td class="portugues">O que você fez ontem?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ik heb gewerkt en daarna gewandeld.">Ik heb gewerkt en daarna gewandeld.</td><td class="portugues">Trabalhei e depois caminhei.</td></tr>
+  </table>
+</section>
+
+<section id="expressoes">
+  <h2>12. Expressões idiomáticas úteis</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Lekker!">Lekker!</td><td class="portugues">Gostoso! / Que bom!</td></tr>
+    <tr><td class="holandes" data-nl="Gezellig!">Gezellig!</td><td class="portugues">Aconchegante / Agradável (sem tradução exata).</td></tr>
+    <tr><td class="holandes" data-nl="Geen dank.">Geen dank.</td><td class="portugues">Não há de quê.</td></tr>
+    <tr><td class="holandes" data-nl="Doe maar gewoon.">Doe maar gewoon.</td><td class="portugues">Aja com naturalidade.</td></tr>
+    <tr><td class="holandes" data-nl="Maakt niet uit.">Maakt niet uit.</td><td class="portugues">Não importa / Tanto faz.</td></tr>
+    <tr><td class="holandes" data-nl="Dat valt mee.">Dat valt mee.</td><td class="portugues">Não é tão ruim assim.</td></tr>
+    <tr><td class="holandes" data-nl="Dat valt tegen.">Dat valt tegen.</td><td class="portugues">É pior do que eu pensava.</td></tr>
+    <tr><td class="holandes" data-nl="Even geduld, alstublieft.">Even geduld, alstublieft.</td><td class="portugues">Um momento, por favor.</td></tr>
+    <tr><td class="holandes" data-nl="Tot zover.">Tot zover.</td><td class="portugues">Por enquanto é isso.</td></tr>
+    <tr><td class="holandes" data-nl="Geen idee.">Geen idee.</td><td class="portugues">Não faço ideia.</td></tr>
+  </table>
+  <div class="nota">
+    <strong>Nota cultural:</strong> a palavra <em>gezellig</em> é icônica no holandês. Significa um misto de aconchego, convivência agradável e ambiente acolhedor. Usa-se para descrever desde um café até um encontro com amigos.
+  </div>
+</section>
+
+<section id="tecnologia">
+  <h2>13. Tecnologia e internet</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Wat is het wifi-wachtwoord?">Wat is het wifi-wachtwoord?</td><td class="portugues">Qual é a senha do wi-fi?</td></tr>
+    <tr><td class="holandes" data-nl="Mijn computer is kapot.">Mijn computer is kapot.</td><td class="portugues">Meu computador quebrou.</td></tr>
+    <tr><td class="holandes" data-nl="Ik moet mijn telefoon opladen.">Ik moet mijn telefoon opladen.</td><td class="portugues">Preciso carregar meu celular.</td></tr>
+    <tr><td class="holandes" data-nl="Heb je een oplader?">Heb je een oplader?</td><td class="portugues">Você tem um carregador?</td></tr>
+    <tr><td class="holandes" data-nl="Ik stuur het via WhatsApp.">Ik stuur het via WhatsApp.</td><td class="portugues">Vou enviar pelo WhatsApp.</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb een online vergadering.">Ik heb een online vergadering.</td><td class="portugues">Tenho uma reunião online.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Heb je internetverbinding?">Heb je internetverbinding?</td><td class="portugues">Você está com conexão de internet?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Ja, het werkt goed.">Ja, het werkt goed.</td><td class="portugues">Sim, está funcionando bem.</td></tr>
+  </table>
+</section>
+
+<section id="viagens">
+  <h2>14. Viagens e turismo</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik ga op vakantie.">Ik ga op vakantie.</td><td class="portugues">Vou de férias.</td></tr>
+    <tr><td class="holandes" data-nl="Ik reis met de trein.">Ik reis met de trein.</td><td class="portugues">Viajo de trem.</td></tr>
+    <tr><td class="holandes" data-nl="Ik wil een rondvaart maken.">Ik wil een rondvaart maken.</td><td class="portugues">Quero fazer um passeio de barco.</td></tr>
+    <tr><td class="holandes" data-nl="Wat zijn de bezienswaardigheden?">Wat zijn de bezienswaardigheden?</td><td class="portugues">Quais são os pontos turísticos?</td></tr>
+    <tr><td class="holandes" data-nl="Ik heb een fiets gehuurd.">Ik heb een fiets gehuurd.</td><td class="portugues">Aluguei uma bicicleta.</td></tr>
+    <tr><td class="holandes" data-nl="Het is mijn eerste keer hier.">Het is mijn eerste keer hier.</td><td class="portugues">É a minha primeira vez aqui.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Welke stad raadt u aan?">Welke stad raadt u aan?</td><td class="portugues">Qual cidade a senhora recomenda?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Utrecht is heel mooi en gezellig.">Utrecht is heel mooi en gezellig.</td><td class="portugues">Utrecht é muito bonita e aconchegante.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe lang blijft u in Nederland?">Hoe lang blijft u in Nederland?</td><td class="portugues">Quanto tempo a senhora vai ficar na Holanda?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Een jaar, voor mijn onderzoek.">Een jaar, voor mijn onderzoek.</td><td class="portugues">Um ano, para minha pesquisa.</td></tr>
+  </table>
+</section>
+
+<section id="despedidas">
+  <h2>15. Despedidas e saudades</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ik ga je missen.">Ik ga je missen.</td><td class="portugues">Vou sentir sua falta.</td></tr>
+    <tr><td class="holandes" data-nl="Het was leuk je te ontmoeten.">Het was leuk je te ontmoeten.</td><td class="portugues">Foi um prazer te conhecer.</td></tr>
+    <tr><td class="holandes" data-nl="Blijven we in contact.">Blijven we in contact.</td><td class="portugues">Vamos manter contato.</td></tr>
+    <tr><td class="holandes" data-nl="Goede reis!">Goede reis!</td><td class="portugues">Boa viagem!</td></tr>
+    <tr><td class="holandes" data-nl="Tot de volgende keer.">Tot de volgende keer.</td><td class="portugues">Até a próxima.</td></tr>
+    <tr><td class="holandes" data-nl="Hou contact via e-mail.">Hou contact via e-mail.</td><td class="portugues">Mantenha contato por e-mail.</td></tr>
+    <tr><td class="holandes" data-nl="Bedankt voor alles.">Bedankt voor alles.</td><td class="portugues">Obrigada por tudo.</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wanneer kom je terug?">Wanneer kom je terug?</td><td class="portugues">Quando você volta?</td></tr>
+    <tr class="resposta"><td class="holandes" data-nl="Hopelijk volgend jaar.">Hopelijk volgend jaar.</td><td class="portugues">Espero que no ano que vem.</td></tr>
+  </table>
+</section>
+
+</div>
+<!-- ============ FIM ABA 2 ============ -->
+
+<footer>
+  Material organizado para Darliane Cunha · Português do Brasil · Áudio em holandês nativo (nl-NL)
+</footer>
+
+</div>
+
+<script>
+  // ===== Sistema de abas =====
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // ===== Speech Synthesis (áudio em holandês) =====
+  const voiceSelect = document.getElementById('voiceSelect');
+  const rateRange = document.getElementById('rateRange');
+  const rateValue = document.getElementById('rateValue');
+  let dutchVoices = [];
+
+  function loadVoices() {
+    const all = speechSynthesis.getVoices();
+    dutchVoices = all.filter(v => v.lang.startsWith('nl'));
+    voiceSelect.innerHTML = '';
+    if (dutchVoices.length === 0) {
+      const opt = document.createElement('option');
+      opt.textContent = 'Voz padrão do navegador';
+      voiceSelect.appendChild(opt);
+    } else {
+      dutchVoices.forEach((v, i) => {
+        const opt = document.createElement('option');
+        opt.value = i;
+        opt.textContent = `${v.name} (${v.lang})`;
+        voiceSelect.appendChild(opt);
+      });
+    }
+  }
+  loadVoices();
+  if (typeof speechSynthesis !== 'undefined') {
+    speechSynthesis.onvoiceschanged = loadVoices;
+  }
+
+  rateRange.addEventListener('input', () => {
+    rateValue.textContent = rateRange.value + 'x';
+  });
+
+  function speak(text, btn) {
+    if (!('speechSynthesis' in window)) {
+      alert('Seu navegador não suporta síntese de voz. Use Chrome, Edge ou Safari.');
+      return;
+    }
+    speechSynthesis.cancel();
+    document.querySelectorAll('.listen-btn.playing').forEach(b => b.classList.remove('playing'));
+
+    const utt = new SpeechSynthesisUtterance(text);
+    utt.lang = 'nl-NL';
+    utt.rate = parseFloat(rateRange.value);
+    if (dutchVoices.length > 0 && voiceSelect.value !== '') {
+      utt.voice = dutchVoices[parseInt(voiceSelect.value)];
+    }
+    utt.onstart = () => btn && btn.classList.add('playing');
+    utt.onend = () => btn && btn.classList.remove('playing');
+    utt.onerror = () => btn && btn.classList.remove('playing');
+    speechSynthesis.speak(utt);
+  }
+
+  // ===== Adiciona botão 🔊 a cada célula em holandês =====
+  document.querySelectorAll('td.holandes').forEach(td => {
+    const text = td.dataset.nl || td.textContent.trim();
+    const original = td.innerHTML;
+    td.innerHTML = `
+      <div class="frase-row">
+        <button class="listen-btn" title="Escutar em holandês" aria-label="Escutar">🔊</button>
+        <span class="frase-text">${original}</span>
+      </div>
+    `;
+    td.querySelector('.listen-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      speak(text, e.currentTarget);
+    });
+  });
+</script>
+
+</body>
+</html>
