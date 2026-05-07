@@ -167,6 +167,25 @@
 
   .pergunta { background: #fff8e1; }
   .resposta { background: #e8f5e9; font-style: italic; }
+  .key { font-weight: 700; color: #ae1c28; background: #fff3cd; padding: 1px 4px; border-radius: 3px; }
+  .intro {
+    background: #f8fafc;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #475569;
+    border-left: 3px solid #ae1c28;
+  }
+  .destaque-frase {
+    background: #fef9e7;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 12px 0;
+    border-left: 3px solid #f59e0b;
+    font-size: 14px;
+  }
+  .destaque-frase strong { color: #ae1c28; }
   .resposta td:first-child .frase-text::before { content: "↳ "; color: #2e7d32; }
   .nota {
     margin-top: 12px;
@@ -203,6 +222,7 @@
   <button class="tab-btn active" data-tab="tab1">📘 Frases Úteis 1</button>
   <button class="tab-btn" data-tab="tab2">📗 Frases Úteis 2</button>
   <button class="tab-btn" data-tab="tab3">📕 Vocabulário</button>
+  <button class="tab-btn" data-tab="tab4">🎓 Guia da Prova</button>
 </div>
 
 <div class="voice-bar">
@@ -951,6 +971,303 @@
 
 </div>
 <!-- ============ FIM ABA 3 ============ -->
+
+<!-- ============ ABA 4 - GUIA DA PROVA ============ -->
+<div class="tab-content" id="tab4">
+
+<div class="intro">
+  <strong>Guia Completo para a Prova de Cultura Neerlandesa</strong> (<em>Kennis van de Nederlandse Samenleving</em>) · Baseado no livro oficial <strong>Naar Nederland</strong> (2015). Palavras-chave destacadas em <span class="key">amarelo</span>. Clique no 🔊 para ouvir a pronúncia em holandês.
+</div>
+
+<nav class="toc">
+  <h2>Sumário · Guia da Prova</h2>
+  <ul>
+    <li><a href="#g-datas">1. Datas, Festividades e Calendário</a></li>
+    <li><a href="#g-politica">2. Política e Governo</a></li>
+    <li><a href="#g-regras">3. Regras e Lei</a></li>
+    <li><a href="#g-educacao">4. Educação</a></li>
+    <li><a href="#g-familia">5. Família e Vida Quotidiana</a></li>
+    <li><a href="#g-saude">6. Saúde</a></li>
+    <li><a href="#g-trabalho">7. Trabalho</a></li>
+    <li><a href="#g-transporte">8. Transporte e Mobilidade</a></li>
+    <li><a href="#g-cidades">9. Cidades e Geografia</a></li>
+    <li><a href="#g-costumes">10. Costumes e Identidade</a></li>
+    <li><a href="#g-personalidades">11. Personalidades Famosas</a></li>
+    <li><a href="#g-lazer">12. Tempo Livre e Lazer</a></li>
+    <li><a href="#g-ferias">13. Férias Escolares</a></li>
+    <li><a href="#g-habitacao">14. Habitação e Vizinhança</a></li>
+    <li><a href="#g-comunicacao">15. Comunicação e Tecnologia</a></li>
+    <li><a href="#g-compras">16. Compras e Dinheiro</a></li>
+    <li><a href="#g-perguntas">17. Perguntas Directas do Exame</a></li>
+  </ul>
+</nav>
+
+<section id="g-datas">
+  <h2>1. Datas, Festividades e Calendário Nacional</h2>
+  <table>
+    <tr><th>Data / Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Op 27 april vieren we de verjaardag van de koning."><strong>27 april</strong>: Op 27 april vieren we de verjaardag van de koning.</td><td class="portugues"><span class="key">Koningsdag</span>: aniversário do <strong>Rei</strong>. Todos vestem laranja.</td></tr>
+    <tr><td class="holandes" data-nl="Op 4 mei herdenken we de slachtoffers van de Tweede Wereldoorlog."><strong>4 mei</strong>: Op 4 mei herdenken we de slachtoffers van de Tweede Wereldoorlog.</td><td class="portugues"><span class="key">Dodenherdenking</span>: dois minutos de silêncio às 20h.</td></tr>
+    <tr><td class="holandes" data-nl="Op 5 mei vieren we de bevrijding. Dan viert men het einde van de Tweede Wereldoorlog."><strong>5 mei</strong>: Op 5 mei vieren we de bevrijding.</td><td class="portugues"><span class="key">Bevrijdingsdag</span>: <strong>Dia da Libertação</strong>. As escolas estão fechadas.</td></tr>
+    <tr><td class="holandes" data-nl="Sinterklaasavond: kinderen krijgen cadeautjes."><strong>5 december</strong>: Sinterklaasavond: kinderen krijgen cadeautjes.</td><td class="portugues">Véspera de <span class="key">Sinterklaas</span>, com presentes para crianças.</td></tr>
+    <tr><td class="holandes" data-nl="Eerste en Tweede Kerstdag."><strong>25 + 26 december</strong>: Eerste en Tweede Kerstdag.</td><td class="portugues"><strong>Natal</strong> tem dois dias de festa.</td></tr>
+    <tr><td class="holandes" data-nl="Nieuwjaarsdag: de eerste dag van het jaar."><strong>1 januari</strong>: Nieuwjaarsdag.</td><td class="portugues">Dia de <strong>Ano Novo</strong>.</td></tr>
+    <tr><td class="holandes" data-nl="Met Pasen zijn er twee vrije dagen."><strong>Pasen</strong>: Met Pasen zijn er twee vrije dagen.</td><td class="portugues"><strong>Páscoa</strong> tem dois dias de feriado.</td></tr>
+    <tr><td class="holandes" data-nl="Ook met Pinksteren zijn er twee vrije dagen."><strong>Pinksteren</strong>: Ook met Pinksteren zijn er twee vrije dagen.</td><td class="portugues"><strong>Pentecostes</strong> também tem dois dias.</td></tr>
+  </table>
+  <div class="destaque-frase"><strong>De scholen zijn dicht in de eerste week van mei.</strong> · As escolas estão fechadas na primeira semana de maio.</div>
+</section>
+
+<section id="g-politica">
+  <h2>2. Política e Governo</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="De koning heet Willem-Alexander."><strong>Rei</strong>: De koning heet Willem-Alexander.</td><td class="portugues"><span class="key">Willem-Alexander</span>: Rei desde 30 de abril de 2013.</td></tr>
+    <tr><td class="holandes" data-nl="Koningin Máxima komt uit het buitenland. Ze heeft heel goed Nederlands geleerd."><strong>Rainha consorte</strong>: Koningin Máxima komt uit het buitenland.</td><td class="portugues"><span class="key">Máxima</span> é argentina de origem.</td></tr>
+    <tr><td class="holandes" data-nl="Amsterdam is de hoofdstad van Nederland."><strong>Capital oficial</strong>: Amsterdam is de hoofdstad van Nederland.</td><td class="portugues">Capital oficial é <span class="key">Amesterdão</span>.</td></tr>
+    <tr><td class="holandes" data-nl="Den Haag is de regeringsstad."><strong>Capital governamental</strong>: Den Haag is de regeringsstad.</td><td class="portugues">O governo e o parlamento ficam em <span class="key">Haia (Den Haag)</span>.</td></tr>
+    <tr><td class="holandes" data-nl="De Tweede Kamer heeft 150 zetels."><strong>Parlamento</strong>: De Tweede Kamer heeft 150 zetels.</td><td class="portugues"><span class="key">Tweede Kamer</span>: Segunda Câmara, 150 lugares.</td></tr>
+    <tr><td class="holandes" data-nl="De Eerste Kamer controleert de wetten."><strong>Primeira Câmara</strong>: De Eerste Kamer controleert de wetten.</td><td class="portugues"><span class="key">Eerste Kamer</span>: Senado, 75 lugares, controlo das leis.</td></tr>
+    <tr><td class="holandes" data-nl="Nederland heeft bijna altijd een coalitieregering."><strong>Governo</strong>: Nederland heeft bijna altijd een coalitieregering.</td><td class="portugues">Quase sempre <span class="key">governo de coligação</span>.</td></tr>
+    <tr><td class="holandes" data-nl="Je moet je inschrijven bij de gemeente."><strong>Município</strong>: Je moet je inschrijven bij de gemeente.</td><td class="portugues">Obrigatório registar-se na <span class="key">gemeente</span> (câmara municipal).</td></tr>
+    <tr><td class="holandes" data-nl="Je moet je aan de wet houden. Anders krijg je problemen."><strong>Leis</strong>: Je moet je aan de wet houden.</td><td class="portugues">É obrigatório cumprir as <strong>leis</strong>.</td></tr>
+    <tr><td class="holandes" data-nl="De overheid controleert of kinderen naar school gaan."><strong>Overheid</strong>: De overheid controleert of kinderen naar school gaan.</td><td class="portugues">O <span class="key">overheid</span> (governo/Estado) fiscaliza o cumprimento das normas.</td></tr>
+  </table>
+</section>
+
+<section id="g-regras">
+  <h2>3. Regras e Lei (Regels)</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Rij niet door rood, dat weet iedereen."><strong>Semáforos</strong>: Rij niet door rood.</td><td class="portugues">Não se passa com <strong>sinal vermelho</strong>.</td></tr>
+    <tr><td class="holandes" data-nl="Fietsen zonder licht is gevaarlijk. Als de politie je pakt, krijg je een bon: dertig euro."><strong>Ciclistas</strong>: Fietsen zonder licht is gevaarlijk. Als de politie je pakt, krijg je een bon: dertig euro.</td><td class="portugues">Sem luz na bicicleta: multa de <span class="key">€30</span>.</td></tr>
+    <tr><td class="holandes" data-nl="Zet de tv of radio niet te hard. Houd rekening met de buren."><strong>Barulho</strong>: Zet de tv of radio niet te hard.</td><td class="portugues">Não se coloca a televisão alta. Respeita-se os <strong>vizinhos</strong>.</td></tr>
+    <tr><td class="holandes" data-nl="Kinderen moeten naar school. De overheid controleert dat. Als ze zomaar thuis blijven, kunnen de ouders een boete krijgen."><strong>Crianças</strong>: Kinderen moeten naar school.</td><td class="portugues">Escola obrigatória, os pais podem ser <span class="key">multados</span> se não cumprirem.</td></tr>
+    <tr><td class="holandes" data-nl="Een man mag zijn vrouw niet slaan. Andersom mag uiteraard ook niet."><strong>Violência</strong>: Een man mag zijn vrouw niet slaan.</td><td class="portugues"><strong>Violência doméstica</strong> é ilegal.</td></tr>
+    <tr><td class="holandes" data-nl="Gebruik je gezond verstand. Dat is meestal voldoende."><strong>Princípio geral</strong>: Gebruik je gezond verstand.</td><td class="portugues">Usa o <span class="key">bom senso</span>. Geralmente é suficiente.</td></tr>
+    <tr><td class="holandes" data-nl="Twijfel je wat wel of niet mag? Vraag het of zoek het op via internet."><strong>Internet</strong>: Twijfel je wat wel of niet mag? Vraag het of zoek het op via internet.</td><td class="portugues">Em caso de dúvida, pesquisa <strong>online</strong>.</td></tr>
+  </table>
+</section>
+
+<section id="g-educacao">
+  <h2>4. Educação (Onderwijs)</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Kinderen gaan naar school vanaf 4 jaar. Verplicht vanaf 5 jaar."><strong>Início</strong>: Kinderen gaan naar school vanaf 4 jaar. Verplicht vanaf 5 jaar.</td><td class="portugues">Crianças vão à escola a partir dos <span class="key">4 anos</span>; obrigatório aos <span class="key">5</span>.</td></tr>
+    <tr><td class="holandes" data-nl="Hoe laat begint de school? Om half negen."><strong>Horário</strong>: Hoe laat begint de school? Om half negen.</td><td class="portugues">A escola começa às <span class="key">8h30</span>.</td></tr>
+    <tr><td class="holandes" data-nl="Taal, rekenen, geschiedenis, sport, tekenen, zingen."><strong>Matérias</strong>: Taal, rekenen, geschiedenis, sport, tekenen, zingen.</td><td class="portugues">Língua, matemática, história, desporto, desenho, canto.</td></tr>
+    <tr><td class="holandes" data-nl="Tegenwoordig krijgen ze Engels, vanaf groep zeven."><strong>Línguas</strong>: Tegenwoordig krijgen ze Engels, vanaf groep zeven.</td><td class="portugues"><strong>Inglês</strong> é ensinado a partir do <span class="key">groep 7</span> (10-11 anos).</td></tr>
+    <tr><td class="holandes" data-nl="Jong geleerd, oud gedaan."><strong>Expressão popular</strong>: Jong geleerd, oud gedaan.</td><td class="portugues">"O que se aprende novo fica para sempre".</td></tr>
+    <tr><td class="holandes" data-nl="Je mag pas stoppen als je een diploma hebt."><strong>Diploma</strong>: Je mag pas stoppen als je een diploma hebt.</td><td class="portugues">Só se pode parar quando se tem <span class="key">diploma</span>.</td></tr>
+    <tr><td class="holandes" data-nl="Aan een universiteit kun je allerlei richtingen kiezen."><strong>Ensino superior</strong>: Aan een universiteit kun je allerlei richtingen kiezen.</td><td class="portugues">Na <strong>universidade</strong> escolhem-se diversas áreas.</td></tr>
+    <tr><td class="holandes" data-nl="Kinderen tussen 16 en 18 doen soms beide: zowel leren als werken."><strong>Combinação</strong>: Kinderen tussen 16 en 18 doen soms beide.</td><td class="portugues">Entre os 16 e 18 anos muitos estudam e trabalham.</td></tr>
+    <tr><td class="holandes" data-nl="De kinderen noemen mij juf Maria. Of juffrouw."><strong>Professora</strong>: De kinderen noemen mij juf Maria.</td><td class="portugues">Professora primária chama-se <span class="key">juffrouw (juf)</span>.</td></tr>
+  </table>
+</section>
+
+<section id="g-familia">
+  <h2>5. Família e Vida Quotidiana (Gezin en Dagelijks Leven)</h2>
+  <div class="destaque-frase"><strong>Het leven verandert als je kinderen krijgt. Je moet veel organiseren, zolang de kinderen klein zijn. Vooral als beide ouders werken.</strong> · A vida muda quando se têm filhos. Há muita organização necessária, sobretudo se ambos os pais trabalham.</div>
+  <div class="destaque-frase"><strong>Een gezin met kinderen is net een bedrijf.</strong> · Uma família com filhos é como uma empresa.</div>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="boodschappen doen">boodschappen doen</td><td class="portugues">fazer <strong>compras</strong></td></tr>
+    <tr><td class="holandes" data-nl="eten klaarmaken">eten klaarmaken</td><td class="portugues"><strong>cozinhar</strong> / preparar a comida</td></tr>
+    <tr><td class="holandes" data-nl="voor schone kleren zorgen">voor schone kleren zorgen</td><td class="portugues">tratar da <strong>roupa</strong> limpa</td></tr>
+    <tr><td class="holandes" data-nl="kinderen halen en brengen">kinderen halen en brengen</td><td class="portugues"><strong>levar e buscar</strong> as crianças</td></tr>
+    <tr><td class="holandes" data-nl="spelletjes met de kinderen doen">spelletjes met de kinderen doen</td><td class="portugues">fazer <strong>jogos</strong> com os filhos</td></tr>
+  </table>
+  <div class="destaque-frase"><strong>Rotina típica</strong>: Eerst ga ik douchen. Dan aankleden. Het ontbijt. Dan het nieuws volgen. En dan naar het werk. · Primeiro tomo duche. Depois visto-me. Tomo o pequeno-almoço. Vejo as notícias. E depois vou para o trabalho.</div>
+</section>
+
+<section id="g-saude">
+  <h2>6. Saúde (Gezondheid)</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Als je ziek bent, bel je de huisarts. Een arts heeft een eigen praktijk."><strong>Médico de família</strong>: Als je ziek bent, bel je de huisarts.</td><td class="portugues">O <span class="key">Médico de família</span> (<span class="key">huisarts</span>) tem consultório próprio.</td></tr>
+    <tr><td class="holandes" data-nl="Je maakt een afspraak via de telefoon. Dan moet je op het spreekuur komen."><strong>Marcação</strong>: Je maakt een afspraak via de telefoon.</td><td class="portugues">Marca-se por <strong>telefone</strong> e vai-se ao <span class="key">spreekuur</span> (horário de consultas).</td></tr>
+    <tr><td class="holandes" data-nl="In de wachtkamer wachten. Soms moet je lang wachten."><strong>Espera</strong>: In de wachtkamer wachten.</td><td class="portugues">Na <span class="key">wachtkamer</span> (sala de espera) por vezes espera-se muito.</td></tr>
+    <tr><td class="holandes" data-nl="Soms stuurt de huisarts je naar de specialist. Dan moet je naar het ziekenhuis."><strong>Especialista</strong>: Soms stuurt de huisarts je naar de specialist.</td><td class="portugues">O <strong>huisarts</strong> encaminha para o <span class="key">specialist</span> no <strong>ziekenhuis</strong> (hospital).</td></tr>
+    <tr><td class="holandes" data-nl="Bij de apotheek haal je medicijnen."><strong>Farmácia</strong>: Bij de apotheek haal je medicijnen.</td><td class="portugues">Na <span class="key">apotheek</span> (farmácia) retiram-se os <strong>medicamentos</strong>.</td></tr>
+    <tr><td class="holandes" data-nl="In Nederland moet iedereen een zorgverzekering hebben."><strong>Seguro</strong>: In Nederland moet iedereen een zorgverzekering hebben.</td><td class="portugues"><span class="key">Zorgverzekering</span> (seguro de saúde) <strong>obrigatório</strong> para todos.</td></tr>
+    <tr><td class="holandes" data-nl="Bel 112 voor noodgevallen."><strong>Urgências</strong>: Bel 112 voor noodgevallen.</td><td class="portugues">Ligar <span class="key">112</span> em caso de <strong>emergência</strong>.</td></tr>
+    <tr><td class="holandes" data-nl="Beweeg regelmatig: fietsen, wandelen, minstens een half uur per dag. Eet goed, rook niet, drink geen of weinig alcohol. Neem voldoende rust."><strong>Conselho do médico</strong>: Beweeg regelmatig, eet goed, rook niet, drink geen of weinig alcohol.</td><td class="portugues">Conselhos padrão do <strong>huisarts</strong>: exercício, boa alimentação, não fumar, pouco álcool, descanso.</td></tr>
+  </table>
+</section>
+
+<section id="g-trabalho">
+  <h2>7. Trabalho (Werk)</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Veertig uur is normaal. Tegenwoordig duurt een werkweek vijf dagen."><strong>Semana laboral</strong>: Veertig uur is normaal.</td><td class="portugues"><span class="key">40 horas</span> por semana, <span class="key">5 dias</span>.</td></tr>
+    <tr><td class="holandes" data-nl="In het verleden moest men zes dagen werken."><strong>Antigamente</strong>: In het verleden moest men zes dagen werken.</td><td class="portugues">No passado trabalhava-se 6 dias por semana.</td></tr>
+    <tr><td class="holandes" data-nl="Ik zoek een baan voor drie keer per week, na acht uur in de ochtend."><strong>Horário</strong>: Ik zoek een baan voor drie keer per week.</td><td class="portugues">Muitos trabalham a tempo parcial (<span class="key">part-time</span>).</td></tr>
+    <tr><td class="holandes" data-nl="Verdient hij veel? Meer dan vroeger. Maar de directeur verdient het meest."><strong>Salário</strong>: De directeur verdient het meest.</td><td class="portugues">Há salários diferentes por função.</td></tr>
+    <tr><td class="holandes" data-nl="Het UWV helpt mensen die werk zoeken."><strong>Desemprego</strong>: Het UWV helpt mensen die werk zoeken.</td><td class="portugues">O <span class="key">UWV</span> apoia quem procura emprego.</td></tr>
+    <tr><td class="holandes" data-nl="Nederlanders nemen brood mee naar hun werk."><strong>Almoço</strong>: Nederlanders nemen brood mee naar hun werk.</td><td class="portugues">Os neerlandeses levam <strong>pão</strong> de casa para o almoço.</td></tr>
+  </table>
+</section>
+
+<section id="g-transporte">
+  <h2>8. Transporte e Mobilidade (Vervoer)</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Op de fiets verlies je weinig tijd. De fiets is veel goedkoper. Op de fiets doe je aan beweging."><strong>Bicicleta</strong>: Op de fiets verlies je weinig tijd.</td><td class="portugues">A <span class="key">bicicleta (fiets)</span> é o meio de transporte mais popular.</td></tr>
+    <tr><td class="holandes" data-nl="Een groot probleem, die files. Het is te druk op de weg."><strong>Trânsito</strong>: Een groot probleem, die files.</td><td class="portugues">O <span class="key">file</span> (congestionamento) é um problema frequente.</td></tr>
+    <tr><td class="holandes" data-nl="Met de OV-chipkaart reis je per trein, tram of bus. Die moet je bestellen via internet."><strong>OV-chipkaart</strong>: Met de OV-chipkaart reis je per trein, tram of bus.</td><td class="portugues">O <span class="key">OV-chipkaart</span> substitui os bilhetes individuais.</td></tr>
+    <tr><td class="holandes" data-nl="Vijfentachtig procent van de treinen rijdt op tijd."><strong>Pontualidade</strong>: Vijfentachtig procent van de treinen rijdt op tijd.</td><td class="portugues"><span class="key">85%</span> dos comboios circulam a horas.</td></tr>
+    <tr><td class="holandes" data-nl="De oorzaak is vaak het slechte weer of een ongeluk."><strong>Atrasos</strong>: De oorzaak is vaak het slechte weer of een ongeluk.</td><td class="portugues">Mau tempo ou acidentes causam <strong>atrasos</strong>.</td></tr>
+    <tr><td class="holandes" data-nl="De NS is de nationale spoorwegmaatschappij."><strong>NS</strong>: De NS is de nationale spoorwegmaatschappij.</td><td class="portugues"><span class="key">NS</span> é a empresa nacional de comboios.</td></tr>
+    <tr><td class="holandes" data-nl="Via 9292ov vindt u informatie over openbaar vervoer."><strong>9292</strong>: Via 9292ov.nl vindt u informatie over openbaar vervoer.</td><td class="portugues">Site oficial para horários de transportes públicos.</td></tr>
+    <tr><td class="holandes" data-nl="Schiphol is de grootste luchthaven van Nederland."><strong>Schiphol</strong>: Schiphol is de grootste luchthaven van Nederland.</td><td class="portugues"><span class="key">Schiphol</span> é o maior <strong>aeroporto</strong> dos Países Baixos.</td></tr>
+  </table>
+</section>
+
+<section id="g-cidades">
+  <h2>9. Cidades e Geografia (Steden en Geografie)</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="De Randstad is het economische hart. Hoe heet het drukke gebied in het westen? De Randstad."><strong>Randstad</strong>: De Randstad is het economische hart.</td><td class="portugues"><span class="key">Randstad</span>: Amesterdão + Roterdão + Haia + Utrecht.</td></tr>
+    <tr><td class="holandes" data-nl="Rotterdam heeft de grootste haven van Europa. Wat kun je in de haven van Rotterdam zien? Grote schepen."><strong>Rotterdam</strong>: Rotterdam heeft de grootste haven van Europa.</td><td class="portugues"><span class="key">Roterdão</span>: porto mais importante da Europa.</td></tr>
+    <tr><td class="holandes" data-nl="Otterlo ligt midden in Nederland, tussen Amersfoort en Arnhem."><strong>Otterlo</strong>: Otterlo ligt midden in Nederland.</td><td class="portugues">Região central, natureza, parques com bicicletas brancas.</td></tr>
+    <tr><td class="holandes" data-nl="Friesland is een gebied met veel water."><strong>Friesland</strong>: Friesland is een gebied met veel water.</td><td class="portugues">Região com muita água, popular para turismo interno.</td></tr>
+    <tr><td class="holandes" data-nl="Op het platteland is weinig werk. Het platteland loopt leeg."><strong>Platteland</strong>: Op het platteland is weinig werk.</td><td class="portugues">O <span class="key">campo</span> está a despovoar-se.</td></tr>
+    <tr><td class="holandes" data-nl="Veel land is gewonnen op het water."><strong>Polders</strong>: Veel land is gewonnen op het water.</td><td class="portugues">Grande parte do território foi <strong>conquistada ao mar</strong>.</td></tr>
+    <tr><td class="holandes" data-nl="Boven de rivieren is Nederland overwegend protestants, onder de rivieren meer katholiek."><strong>Norte e Sul</strong>: Boven de rivieren protestants, onder de rivieren katholiek.</td><td class="portugues">Norte: <span class="key">protestante</span>. Sul: <span class="key">católico</span>.</td></tr>
+  </table>
+</section>
+
+<section id="g-costumes">
+  <h2>10. Costumes e Identidade Neerlandesa (Gewoontes)</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Bij de thee krijg je maar één koekje."><strong>Um biscoito</strong>: Bij de thee krijg je maar één koekje.</td><td class="portugues">Com o chá serve-se apenas <span class="key">um biscoito</span> (moderação).</td></tr>
+    <tr><td class="holandes" data-nl="Op het toilet hangt een verjaardagskalender. Daarop staat de geboortedatum van vrienden en leden van de familie."><strong>Calendário no WC</strong>: Op het toilet hangt een verjaardagskalender.</td><td class="portugues"><span class="key">Verjaardagskalender</span> (calendário de aniversários) na casa de banho.</td></tr>
+    <tr><td class="holandes" data-nl="Nederlanders nemen brood mee naar hun werk."><strong>Pão de casa</strong>: Nederlanders nemen brood mee naar hun werk.</td><td class="portugues">Levam o almoço de casa em vez de comer na cantina.</td></tr>
+    <tr><td class="holandes" data-nl="Nederlanders houden de gordijnen open. Je kunt overal naar binnen kijken."><strong>Cortinas abertas</strong>: Nederlanders houden de gordijnen open.</td><td class="portugues"><span class="key">Cortinas abertas</span>: transparência, nada a esconder.</td></tr>
+    <tr><td class="holandes" data-nl="Altijd die agenda. Altijd afspraken. Altijd precies op tijd."><strong>Pontualidade</strong>: Altijd precies op tijd.</td><td class="portugues">A <span class="key">pontualidade</span> e a agenda são essenciais.</td></tr>
+    <tr><td class="holandes" data-nl="Doe maar gewoon, dan doe je al gek genoeg."><strong>Modéstia</strong>: Doe maar gewoon, dan doe je al gek genoeg.</td><td class="portugues">"Seja normal, já é suficientemente louco."</td></tr>
+    <tr><td class="holandes" data-nl="Nederlanders zijn direct. Ze zeggen wat ze denken."><strong>Linguagem directa</strong>: Nederlanders zijn direct.</td><td class="portugues"><span class="key">Comunicação directa</span> e sem rodeios.</td></tr>
+    <tr><td class="holandes" data-nl="Nederland heeft meer fietsen dan mensen."><strong>Bicicleta</strong>: Nederland heeft meer fietsen dan mensen.</td><td class="portugues">Mais <strong>bicicletas</strong> do que habitantes no país.</td></tr>
+  </table>
+</section>
+
+<section id="g-personalidades">
+  <h2>11. Personalidades Famosas (Bekend)</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Ook onze koning kennen buitenlanders wel."><strong>Rei Willem-Alexander</strong>: Ook onze koning kennen buitenlanders wel.</td><td class="portugues"><span class="key">Willem-Alexander</span>: Rei desde 2013.</td></tr>
+    <tr><td class="holandes" data-nl="Zij is nu Nederlander, maar zij komt uit het buitenland. Ze heeft heel goed Nederlands geleerd."><strong>Rainha Máxima</strong>: Zij komt uit het buitenland.</td><td class="portugues"><span class="key">Máxima</span>: nasceu na <strong>Argentina</strong>.</td></tr>
+    <tr><td class="holandes" data-nl="In de eerste plaats de voetballers. Hun namen worden vaak genoemd."><strong>Futebolistas</strong>: In de eerste plaats de voetballers.</td><td class="portugues">Os <strong>futebolistas</strong> são os mais conhecidos internacionalmente.</td></tr>
+    <tr><td class="holandes" data-nl="Ook onze schilders zijn bekend. Iedereen kan wel een paar namen bedenken."><strong>Pintores</strong>: Ook onze schilders zijn bekend.</td><td class="portugues"><span class="key">Rembrandt</span>, <span class="key">Vermeer</span>, <span class="key">Van Gogh</span>.</td></tr>
+    <tr><td class="holandes" data-nl="Fokker heeft het eerste Nederlandse vliegtuig gebouwd."><strong>Fokker</strong>: Fokker heeft het eerste Nederlandse vliegtuig gebouwd.</td><td class="portugues">Pioneiro da <strong>aviação</strong> neerlandesa.</td></tr>
+    <tr><td class="holandes" data-nl="Die naam kent iedereen."><strong>Philips</strong>: Die naam kent iedereen.</td><td class="portugues">Marca <strong>electrónica</strong> mundialmente conhecida.</td></tr>
+    <tr><td class="holandes" data-nl="Als je in Nederland woont, leer je de namen kennen van Jip en Janneke. Ze spreken eenvoudig Nederlands: Jip-en-Janneketaal."><strong>Jip en Janneke</strong>: Ze spreken eenvoudig Nederlands.</td><td class="portugues">Personagens de livros infantis. <span class="key">Jip-en-Janneketaal</span> = linguagem simples.</td></tr>
+    <tr><td class="holandes" data-nl="Het dagboek van Anne Frank is een van de meest gelezen boeken ter wereld."><strong>Anne Frank</strong>: Het dagboek van Anne Frank is een van de meest gelezen boeken ter wereld.</td><td class="portugues">Símbolo do <span class="key">Holocausto</span>. Casa-museu em Amesterdão.</td></tr>
+  </table>
+</section>
+
+<section id="g-lazer">
+  <h2>12. Tempo Livre e Lazer (Vrije Tijd)</h2>
+  <div class="destaque-frase"><strong>Hoeveel uur per week werkt men? Veertig uur. Tegenwoordig duurt een werkweek vijf dagen.</strong></div>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Fietsen, voetballen, wandelen, zwemmen."><strong>Desporto</strong>: Fietsen, voetballen, wandelen, zwemmen.</td><td class="portugues">Mais populares: <span class="key">futebol</span> e <span class="key">ciclismo</span>.</td></tr>
+    <tr><td class="holandes" data-nl="Boeken over allerlei onderwerpen, zoals geschiedenis en politiek."><strong>Leitura</strong>: Boeken over allerlei onderwerpen.</td><td class="portugues">Leitura sobre <strong>história</strong> e <strong>política</strong> é popular.</td></tr>
+    <tr><td class="holandes" data-nl="Uitgaan kan betekenen: naar een restaurant, café, concert, discotheek of bioscoop."><strong>Sair à noite</strong>: Uitgaan kan betekenen: naar een restaurant, café, concert, discotheek of bioscoop.</td><td class="portugues">Sair para restaurante, café, concerto, discoteca ou cinema.</td></tr>
+    <tr><td class="holandes" data-nl="Als ouderen uitgaan, kiezen ze voor een voorstelling die begint rond acht uur. Jonge mensen gaan veel later op stap, pas om twaalf uur."><strong>Horários</strong>: Ouderen kiezen acht uur. Jonge mensen pas om twaalf uur.</td><td class="portugues">Idosos saem mais cedo; jovens saem à <span class="key">meia-noite</span>.</td></tr>
+    <tr><td class="holandes" data-nl="Op zondag zoeken mensen rust in de natuur, buiten de stad."><strong>Natureza</strong>: Op zondag zoeken mensen rust in de natuur.</td><td class="portugues">Aos <strong>domingos</strong> muitos saem para a natureza.</td></tr>
+    <tr><td class="holandes" data-nl="Via internet koop en verkoop ik spullen. Ik volg het nieuws. Bellen met de familie doe ik ook met de computer."><strong>Internet</strong>: Via internet koop en verkoop ik spullen.</td><td class="portugues"><strong>Internet</strong> central na vida quotidiana.</td></tr>
+    <tr><td class="holandes" data-nl="Veel Nederlanders gaan per auto naar Frankrijk, Spanje of Italië."><strong>Férias</strong>: Veel Nederlanders gaan per auto naar Frankrijk, Spanje of Italië.</td><td class="portugues">Verão: <span class="key">França, Espanha, Itália</span>.</td></tr>
+  </table>
+</section>
+
+<section id="g-ferias">
+  <h2>13. Férias Escolares e Vacances</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="De scholen zijn anderhalve maand dicht vanwege de zomervakantie."><strong>Verão</strong>: De scholen zijn anderhalve maand dicht.</td><td class="portugues">Verão: <span class="key">6 semanas</span> de férias.</td></tr>
+    <tr><td class="holandes" data-nl="De scholen zijn dicht in de eerste week van mei."><strong>Maio</strong>: De scholen zijn dicht in de eerste week van mei.</td><td class="portugues">Semana da <strong>Memória</strong> e da <strong>Libertação</strong>.</td></tr>
+    <tr><td class="holandes" data-nl="Op 27 april is het feest. Veel mensen nemen vrij."><strong>Koningsdag</strong>: Op 27 april is het feest. Veel mensen nemen vrij.</td><td class="portugues"><span class="key">Feriado nacional</span>.</td></tr>
+  </table>
+</section>
+
+<section id="g-habitacao">
+  <h2>14. Habitação e Vizinhança (Wonen en Buurt)</h2>
+  <div class="destaque-frase"><strong>In onze buurt wonen mensen uit allerlei culturen. Dat is normaal in Nederland.</strong> · No nosso bairro vivem pessoas de todas as culturas. É normal nos Países Baixos.</div>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="Je kunt een woning huren. Dan betaal je een vast bedrag per maand."><strong>Aluguer</strong>: Je kunt een woning huren.</td><td class="portugues">Muitos <span class="key">alugam casa</span> por valor mensal fixo.</td></tr>
+    <tr><td class="holandes" data-nl="Een huis kopen is duur, zeker als het pas gebouwd is."><strong>Compra</strong>: Een huis kopen is duur.</td><td class="portugues">Comprar casa é <strong>caro</strong>, especialmente nova.</td></tr>
+    <tr><td class="holandes" data-nl="Houd rekening met de buren. Zet de tv niet te hard."><strong>Vizinhos</strong>: Houd rekening met de buren.</td><td class="portugues">Respeitar os <strong>vizinhos</strong> é obrigatório.</td></tr>
+    <tr><td class="holandes" data-nl="Als buren veel lawaai maken, kun je de politie bellen."><strong>Polícia</strong>: Als buren veel lawaai maken, kun je de politie bellen.</td><td class="portugues">Pode-se chamar a <span class="key">politie</span> em caso de muito barulho.</td></tr>
+    <tr><td class="holandes" data-nl="Er wonen mensen uit allerlei culturen in Nederland. Daar komt er nu eentje bij."><strong>Multicultural</strong>: Er wonen mensen uit allerlei culturen in Nederland.</td><td class="portugues">Sociedade <span class="key">multicultural</span>.</td></tr>
+  </table>
+</section>
+
+<section id="g-comunicacao">
+  <h2>15. Comunicação e Tecnologia</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="We sturen post per computer. Dat is gratis, snel en gemakkelijk."><strong>E-mail</strong>: We sturen post per computer.</td><td class="portugues"><span class="key">E-mail</span>: gratuito, rápido e fácil.</td></tr>
+    <tr><td class="holandes" data-nl="Een brief per post sturen kan nog steeds. Je schrijft met de hand."><strong>Carta</strong>: Een brief per post sturen kan nog steeds.</td><td class="portugues"><strong>Carta</strong> em papel ainda se usa.</td></tr>
+    <tr><td class="holandes" data-nl="Soms wil je een persoonlijk kaartje sturen, bijv. als iemand is gestorven."><strong>Cartão</strong>: Soms wil je een persoonlijk kaartje sturen.</td><td class="portugues"><strong>Cartão</strong> pessoal: morte, aniversário, condolências.</td></tr>
+    <tr><td class="holandes" data-nl="Nu is bellen goedkoop. Of gratis via de computer."><strong>Chamadas</strong>: Nu is bellen goedkoop.</td><td class="portugues">Chamadas por <strong>computador</strong> são gratuitas.</td></tr>
+    <tr><td class="holandes" data-nl="Veel liefs. Hartelijke groeten. Tot gauw. Hoogachtend."><strong>Despedidas</strong>: Veel liefs. Hartelijke groeten. Tot gauw. Hoogachtend.</td><td class="portugues">Encerramento <span class="key">informal</span> a <span class="key">formal</span>.</td></tr>
+  </table>
+</section>
+
+<section id="g-compras">
+  <h2>16. Compras e Dinheiro (Winkelen en Geld)</h2>
+  <table>
+    <tr><th>Holandês</th><th>Português</th></tr>
+    <tr><td class="holandes" data-nl="In Nederland betaal je met euro's."><strong>Moeda</strong>: In Nederland betaal je met euro's.</td><td class="portugues">Moeda: <span class="key">euro</span>.</td></tr>
+    <tr><td class="holandes" data-nl="Kun je pinnen of moet je contant betalen?"><strong>Pagamento</strong>: Kun je pinnen of moet je contant betalen?</td><td class="portugues">Pagar com cartão (<span class="key">pinnen</span>) ou numerário (<span class="key">contant</span>).</td></tr>
+    <tr><td class="holandes" data-nl="Twee halen, één betalen."><strong>Promoção</strong>: Twee halen, één betalen.</td><td class="portugues">"<span class="key">Leve dois, pague um</span>": promoção comum.</td></tr>
+    <tr><td class="holandes" data-nl="Een huis kopen is duur. Je kunt ook een woning huren."><strong>Habitação</strong>: Een huis kopen is duur.</td><td class="portugues">Comprar ou alugar casa.</td></tr>
+    <tr><td class="holandes" data-nl="Een tweedehands auto kost gemiddeld een paar duizend euro."><strong>Carro</strong>: Een tweedehands auto kost gemiddeld een paar duizend euro.</td><td class="portugues">Carro <strong>usado</strong>: alguns milhares de euros em média.</td></tr>
+    <tr><td class="holandes" data-nl="Zelfs kleine bedragen kun je tegenwoordig pinnen."><strong>Klein bedrag, pinnen mag</strong>: Zelfs kleine bedragen kun je tegenwoordig pinnen.</td><td class="portugues">Até valores pequenos se pagam com <strong>cartão</strong>.</td></tr>
+  </table>
+</section>
+
+<section id="g-perguntas">
+  <h2>17. Perguntas Directas do Exame</h2>
+  <div class="intro">Perguntas retiradas dos exercícios e <em>tussentoetsen</em> do livro. Estude estas respostas, são as mais cobradas no exame.</div>
+  <table>
+    <tr><th>Pergunta (Holandês)</th><th>Resposta esperada</th></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wanneer is de verjaardag van de Nederlandse koning?">Wanneer is de verjaardag van de Nederlandse koning?</td><td class="portugues"><span class="key">27 april</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat vieren Nederlanders op 5 mei?">Wat vieren Nederlanders op 5 mei?</td><td class="portugues"><span class="key">De bevrijding</span> / het einde van de Tweede Wereldoorlog</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat herdenken Nederlanders op 4 mei?">Wat herdenken Nederlanders op 4 mei?</td><td class="portugues">De slachtoffers van de <strong>Tweede Wereldoorlog</strong></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe heet het drukke gebied in het westen van Nederland?">Hoe heet het drukke gebied in het westen van Nederland?</td><td class="portugues"><span class="key">De Randstad</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat kun je in de haven van Rotterdam zien?">Wat kun je in de haven van Rotterdam zien?</td><td class="portugues"><strong>Grote schepen</strong> / de grootste haven van Europa</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Welke kaart gebruik je voor openbaar vervoer?">Welke kaart gebruik je voor openbaar vervoer?</td><td class="portugues"><span class="key">De OV-chipkaart</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoeveel procent van de treinen rijdt op tijd?">Hoeveel procent van de treinen rijdt op tijd?</td><td class="portugues"><span class="key">85 procent</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoeveel uur werkt men normaal per week?">Hoeveel uur werkt men normaal per week?</td><td class="portugues"><span class="key">Veertig uur</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoeveel dagen werkt men per week?">Hoeveel dagen werkt men per week?</td><td class="portugues"><span class="key">Vijf dagen</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wanneer gaan kinderen in Nederland naar school?">Wanneer gaan kinderen in Nederland naar school?</td><td class="portugues">Verplicht vanaf <span class="key">5 jaar</span>; veel kinderen beginnen op 4 jaar</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe laat begint de school?">Hoe laat begint de school?</td><td class="portugues">Om <span class="key">half negen</span> (8h30)</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe noem je een vrouw die op school les geeft?">Hoe noem je een vrouw die op school les geeft?</td><td class="portugues">Een <span class="key">juffrouw / juf</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe noem je iemand die op het land werkt?">Hoe noem je iemand die op het land werkt?</td><td class="portugues">Een <span class="key">boer</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Welke taal spreekt men in Nederland?">Welke taal spreekt men in Nederland?</td><td class="portugues"><span class="key">Nederlands</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Welke taal spreekt men in Engeland?">Welke taal spreekt men in Engeland?</td><td class="portugues"><span class="key">Engels</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Welke taal spreekt men in Frankrijk?">Welke taal spreekt men in Frankrijk?</td><td class="portugues"><span class="key">Frans</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Waar haal je medicijnen?">Waar haal je medicijnen?</td><td class="portugues">Bij de <span class="key">apotheek</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoe maak je een afspraak bij de huisarts?">Hoe maak je een afspraak bij de huisarts?</td><td class="portugues">Via de <span class="key">telefoon</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat is het ov?">Wat is het ov?</td><td class="portugues"><span class="key">Openbaar vervoer</span>: trein, tram, bus en metro</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoeveel dagen heeft één week?">Hoeveel dagen heeft één week?</td><td class="portugues"><span class="key">Zeven dagen</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="In welk seizoen is het koud in Nederland?">In welk seizoen is het koud in Nederland?</td><td class="portugues">In de <span class="key">winter</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wanneer zijn de scholen dicht in de zomer?">Wanneer zijn de scholen dicht in de zomer?</td><td class="portugues"><span class="key">Anderhalve maand</span> (6 weken)</td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Hoeveel kost een bon voor fietsen zonder licht?">Hoeveel kost een bon voor fietsen zonder licht?</td><td class="portugues"><span class="key">Dertig euro</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wie zijn Jip en Janneke?">Wie zijn Jip en Janneke?</td><td class="portugues">Twee kinderen uit Nederlandse <strong>kinderverhalen</strong></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wie heeft het eerste Nederlandse vliegtuig gebouwd?">Wie heeft het eerste Nederlandse vliegtuig gebouwd?</td><td class="portugues"><span class="key">Fokker</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat is de hoofdstad van Nederland?">Wat is de hoofdstad van Nederland?</td><td class="portugues"><span class="key">Amsterdam</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Wat is de regeringsstad?">Wat is de regeringsstad?</td><td class="portugues"><span class="key">Den Haag</span></td></tr>
+    <tr class="pergunta"><td class="holandes" data-nl="Welk nummer bel je voor noodgevallen?">Welk nummer bel je voor noodgevallen?</td><td class="portugues"><span class="key">112</span></td></tr>
+  </table>
+</section>
+
+</div>
+<!-- ============ FIM ABA 4 ============ -->
 
 <footer>
   Material organizado para Darliane Cunha · Português do Brasil · Áudio em holandês nativo (nl-NL)
